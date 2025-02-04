@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>MON SITE DE CROCHET</h1>
+        <h1>Krochet & Cnit</h1>
         <nav>
         <ul>
             <li><a href="#">Articles</a></li>
@@ -26,10 +26,18 @@
         </form>
         <button>S'identifier</button>   
     </div>
-
     </header>
+    <main>
+        <section class="home">
+            <h2><a href="#">Patrons de crochet</a></h2>
+            <img src="assets/flowers_homepage.png" alt="fleurs en crochet"/>
+        </section>
+    </main>
+   
+
     <footer>
         <p>Author : Elisa Chhay</p>
+        <p>php -S localhost:8000</p>
 
     </footer>
 </body>
