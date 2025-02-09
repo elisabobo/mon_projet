@@ -5,27 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Krochet & Cnit</title>
 </head>
 <body>
     <header>
-        <h1>Krochet & Cnit</h1>
         <nav>
         <ul>
+            <li class="logo">Krochet & Cnit</li>
+            <div class="nav-item">
             <li><a href="#">Articles</a></li>
             <li><a href="#">Crochet</a></li>
             <li><a href="#">Tricot</a></li>
             <li><a href="#">Projets personnels</a></li>
+            </div>
+            <li class="barre-recherche">
+                <input type="search" id="recherche">
+                <span class="fas fa-search"></span>
+            </li>
             
         </ul>
     </nav>
-    <div>
-        <form>
-            <input type="search" id="recherche" name="q" /> 
-            <button>o</button>
-        </form>
-        <button>S'identifier</button>   
-    </div>
+ 
     </header>
     <main>
         <section class="home">

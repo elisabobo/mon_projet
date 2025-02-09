@@ -1,3 +1,12 @@
 html{
     background-color: rgb(251, 223, 237);
 }
+body {
+    margin: 0
+}
+nav{
+    background-color: #F8C8DC;
+    padding: 10px 40px 10px 70px;
+
+    
+}
