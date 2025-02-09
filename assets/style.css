@@ -2,11 +2,52 @@ html{
     background-color: rgb(251, 223, 237);
 }
 body {
-    margin: 0
+    margin: 0;
 }
 nav{
     background-color: #F8C8DC;
     padding: 10px 40px 10px 70px;
 
-    
+}
+
+nav ul {
+    display : flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center; /*meme largeur en haut et en bas*/
+    justify-content: center;
+}
+
+nav ul li.logo{
+    flex: 1;
+    font-size: 25px;
+    font-weight: 700;
+
+}
+
+nav ul div.nav-item{
+    padding: 0 25px;
+    display:inline-flex; /*les met en ligne*/
+
+
+}
+
+nav ul div.nav-item a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 0 25px;
+}
+
+nav ul .barre-recherche{
+    display: flex;
+    height: 35px;
+    align-items: center;
+    gap: 10px
+
+}
+
+#recherche{
+    border-radius: 10px;
+    border-style: hidden;
 }
