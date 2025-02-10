@@ -13,6 +13,7 @@
         <nav>
         <ul>
             <li class="logo">Krochet & Cnit</li>
+            <li class="btn"><span class="fas fa-bars"></span></li>
             <div class="nav-item">
             <li><a href="#">Articles</a></li>
             <li><a href="#">Crochet</a></li>
@@ -20,8 +21,9 @@
             <li><a href="#">Projets personnels</a></li>
             </div>
             <li class="barre-recherche">
-                <input type="search" id="recherche">
-                <span class="fas fa-search"></span>
+                <input type="search" id="recherche" placeholder="Recherche...">
+                <label class="icon">
+                <span class="fas fa-search"></span></label>
             </li>
             
         </ul>
