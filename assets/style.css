@@ -8,15 +8,16 @@ nav{
     background-color: #F8C8DC;
     padding: 10px 40px 10px 70px;
     color: white;
-
-}
-
-nav ul {
-    display : flex;
     list-style: none;
-    flex-wrap: wrap;
-    align-items: center; /*meme largeur en haut et en bas*/
-    justify-content: center;
+    
+    .navbar {
+        display : flex;
+        justify-content: center;
+        align-items: center; /*meme largeur en haut et en bas*/
+        flex-wrap: wrap;
+        
+    }
+
 }
 
 nav ul li.logo{
@@ -42,40 +43,38 @@ nav ul div.nav-item a{
 nav ul div.nav-item a:hover{
     color: rgb(244, 142, 159);
 }
-nav ul .barre-recherche {
+nav form {
     height: 30px;
     width: 240px;
     display: flex;
-      
     align-items: center;
-}
-nav ul .barre-recherche input{
-    
-    height: 100%;
-    width: 200px;
-    border: none;
-    padding: 0 10px;
-    border-radius: 5px 0 0 5px;
 
+    input{
+        height: 100%;
+        width: 200px;
+        border: none;
+        padding: 0 10px;
+        border-radius: 5px 0 0 5px;
+
+    }
 }
 
-#recherche{
-    border-radius: 10px;
-    border-style: hidden;
 
-}
-nav ul .barre-recherche .icon{
+button {
     height: 100%;
     width: 40px;
     line-height: 40px;
-    text-align: center;
+
     background-color: rgb(250, 153, 169);
     /*courber le bord que sur le côté droit*/
     border-radius: 0 5px 5px 0;
-
+    border:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-nav ul .barre-recherche .icon:hover{
+button:hover{
     background-color: rgb(244, 142, 159);
 }
 
@@ -90,3 +89,8 @@ nav ul .barre-recherche .icon:hover{
         flex:4;
     }
   }
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #F8C8DC;
+}

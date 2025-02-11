@@ -11,6 +11,7 @@
 <body>
     <header>
         <nav>
+            <div class="navbar">
         <ul>
             <li class="logo">Krochet & Cnit</li>
             <li class="btn"><span class="fas fa-bars"></span></li>
@@ -19,14 +20,14 @@
             <li><a href="#">Crochet</a></li>
             <li><a href="#">Tricot</a></li>
             <li><a href="#">Projets personnels</a></li>
-            </div>
-            <li class="barre-recherche">
-                <input type="search" id="recherche" placeholder="Recherche...">
-                <label class="icon">
-                <span class="fas fa-search"></span></label>
-            </li>
-            
+
         </ul>
+            <form class="barre-recherche">
+                <input type="search" id="recherche" placeholder="Recherche...">
+                <button>
+                <span class="fas fa-search"></span>
+            </button></form> 
+</div>
     </nav>
  
     </header>
