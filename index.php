@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Krochet & Cnit</title>
 </head>
 <body>
-    <header>
-        
+  
+    <header> 
         <nav>
-
-        <div class="navbar">
         <h1>Krochet & Cnit</h1>
         <ul>
             <div class="nav-item">
@@ -31,9 +29,8 @@
                 <span class="fas fa-search"></span>
             </button></form> 
             <div class="burger_menu"><span class="fas fa-bars"></span></div>
-</div>
     </nav>
- 
+
     </header>
     <main>
         <section class="home">

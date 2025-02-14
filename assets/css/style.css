@@ -10,16 +10,11 @@ nav{
     background-color: #F8C8DC;
     padding: 10px 40px 10px 70px;
     color: white;
-    
-
-    
-    .navbar {
-        display : flex;
-        justify-content: center;
-        align-items: center; /*meme largeur en haut et en bas*/
-        flex-wrap: wrap;
+    display : flex;
+    justify-content: center;
+    align-items: center; /*meme largeur en haut et en bas*/
+    flex-wrap: wrap;
         
-    }
 
 }
 
