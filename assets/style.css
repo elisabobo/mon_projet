@@ -3,12 +3,15 @@ html{
 }
 body {
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
+
 nav{
     background-color: #F8C8DC;
     padding: 10px 40px 10px 70px;
     color: white;
-    list-style: none;
+    
+
     
     .navbar {
         display : flex;
@@ -37,11 +40,13 @@ nav ul div.nav-item a{
     color: white;
     font-weight: 700;
     font-size: 18px;
-    padding: 0 25px;
+    padding: 5px 25px;
+    border-radius: 15px;
 }
 
 nav ul div.nav-item a:hover{
-    color: rgb(244, 142, 159);
+    color: rgb(244, 172, 197);
+    background-color: rgb(255, 230, 241);
 }
 nav form {
     height: 30px;
@@ -59,7 +64,9 @@ nav form {
     }
 }
 
-
+ul{
+    list-style: none;
+}
 button {
     height: 100%;
     width: 40px;
@@ -78,19 +85,32 @@ button:hover{
     background-color: rgb(244, 142, 159);
 }
 
-@media screen and (max-width: 1052px) {
-    nav {
-      padding: 10px 40px 10px 0px;
-    }
-    .logo{
-        display: none;
-    }
-    nav ul div.nav-item {
-        flex:4;
-    }
-  }
 footer{
     position: absolute;
     bottom: 0;
     background-color: #F8C8DC;
 }
+
+.burger_menu{
+    display:none;
+  }
+
+/*sur plus petits écrans */
+@media screen and (max-width: 1052px) {
+    nav {
+      padding: 10px 40px 10px 0px;
+    }
+
+    h1{
+        display: none;
+    }
+    nav ul div.nav-item {
+        flex:4;
+    }
+
+    .burger_menu{
+        display: block;
+    }
+  }
+
+ 
