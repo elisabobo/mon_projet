@@ -17,11 +17,15 @@
     <header> 
         <nav>
             <!-- NAVBAR -->
-            <div class="nav_toggle" id="nav-toggle">
+            <div class="nav_top">
+                <h1>Krochet & Cnit</h1>
+                <div class="nav_toggle" id="nav-toggle">
                   <i class="ri-menu-line nav_burger"></i>
                   <i class="ri-close-line nav_close"></i>
                </div>
-            <h1>Krochet & Cnit</h1>
+
+            </div>
+           
             <ul class="nav-item" id="nav-menu">
                 <li><a href="#">Articles</a></li>
                 <li><a href="#">Crochet</a></li>
@@ -40,7 +44,7 @@
     <main>
         <section class="home">
             <h2><a href="#">Patrons de crochet</a></h2>
-            <img src="assets/flowers_homepage.png" alt="fleurs en crochet"/>
+            <img src="assets/flowers_homepage.png" alt="Patrons de crochet"/>
         </section>
     </main>
    

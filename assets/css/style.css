@@ -84,32 +84,71 @@ footer{
     position: absolute;
     bottom: 0;
     background-color: #F8C8DC;
+    width : 100%;
 }
 
 /*MENU BURGER*/
 .nav_toggle{
     display: none;
     position: absolute;
-    right: 15px;
-    top: 15px;
+    left: 15px;
+    top: 10px;
     font-size: 30px;
     cursor: pointer;
+    /*passe les élements au-dessus des autres*/
     z-index: 10;
 }
-.nav_burger, .nav_close {
+.nav_burger{
+    display: block;
+}
+.nav_close {
     display: none;
+}
+.nav_toggle.active .nav_burger{
+    display: none;
+}
+
+.nav_toggle.active .nav_close{
+    display: block;
 }
 /*sur plus petits écrans */
 @media screen and (max-width: 1052px) {
     nav {
-      padding: 10px 40px 10px 0px;
+        flex-direction: column;
     }
 
-    h1{
-        display: none;
+    .nav_top {
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
+
+    h1 {
+        margin: 0;
+    }
+
     .nav_toggle {
         display: block;
+    }
+
+    nav form {
+        margin-top: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    ul.nav-item {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(248, 200, 220, 0.95);
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    ul.nav-item.active {
+        display: flex;
     }
   }
 
