@@ -4,33 +4,23 @@ html{
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    color: white;
 }
 
 nav{
     background-color: #F8C8DC;
     padding: 10px 40px 10px 70px;
-    color: white;
+    
     display : flex;
     justify-content: center;
     align-items: center; /*meme largeur en haut et en bas*/
     flex-wrap: wrap;
-        
+     
 
 }
 
-nav ul li.logo{
-    flex: 1;
-    font-size: 25px;
-    font-weight: 700;
 
-}
-
-nav ul div.nav-item{
-    padding: 0 25px;
-    display:inline-flex; /*les met en ligne*/
-}
-
-nav ul div.nav-item a{
+ul.nav-item a{
     text-decoration: none;
     color: white;
     font-weight: 700;
@@ -39,7 +29,7 @@ nav ul div.nav-item a{
     border-radius: 15px;
 }
 
-nav ul div.nav-item a:hover{
+ul.nav-item a:hover{
     color: rgb(244, 172, 197);
     background-color: rgb(255, 230, 241);
 }
@@ -59,8 +49,18 @@ nav form {
     }
 }
 
-ul{
+ul.nav-item{
     list-style: none;
+    padding: 0 25px;
+    display:inline-flex; /*les met en ligne*/
+    
+}
+
+h1 {
+    flex: 1;
+    font-size: 25px;
+    font-weight: 700;
+
 }
 button {
     height: 100%;
@@ -86,10 +86,19 @@ footer{
     background-color: #F8C8DC;
 }
 
-.burger_menu{
-    display:none;
-  }
-
+/*MENU BURGER*/
+.nav_toggle{
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+.nav_burger, .nav_close {
+    display: none;
+}
 /*sur plus petits écrans */
 @media screen and (max-width: 1052px) {
     nav {
@@ -99,11 +108,7 @@ footer{
     h1{
         display: none;
     }
-    nav ul div.nav-item {
-        flex:4;
-    }
-
-    .burger_menu{
+    .nav_toggle {
         display: block;
     }
   }
