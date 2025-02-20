@@ -13,9 +13,10 @@
     <li><a href="#">Projets personnels</a></li>
 </ul>
 
-<form class="barre-recherche">
-    <input type="search" id="recherche" placeholder="Recherche...">
+<form>
+    <input type="search" placeholder="Recherche...">
     <button type="submit">
         <span class="fas fa-search"></span>
     </button>
 </form>
+

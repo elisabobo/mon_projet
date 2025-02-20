@@ -23,12 +23,12 @@
     </header>
 
     <main>
-        <section class="carrousel">
-            <div class="container-carroussel">
-               
+        <section>
+            <h2>
+                à suivre...
+            </h2>
                 <img src="assets/pics/flowers_homepage.png" alt="Patrons de crochet"/>
-            </div>
-            
+     
         </section>
     </main>
    

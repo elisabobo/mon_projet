@@ -81,7 +81,9 @@ button:hover{
 }
 
 /*IMAGE DE L'ACCUEIL*/
-
+img{
+    max-height: 200px;
+}
 
 footer{
     position: absolute;
