@@ -11,40 +11,24 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Krochet & Cnit</title>
+    <script src="assets/js/main.js" type="module"></script>
 </head>
 <body>
   
     <header> 
         <nav>
             <!-- NAVBAR -->
-            <div class="nav_top">
-                <h1>Krochet & Cnit</h1>
-                <div class="nav_toggle" id="nav-toggle">
-                  <i class="ri-menu-line nav_burger"></i>
-                  <i class="ri-close-line nav_close"></i>
-               </div>
-
-            </div>
-           
-            <ul class="nav-item" id="nav-menu">
-                <li><a href="#">Articles</a></li>
-                <li><a href="#">Crochet</a></li>
-                <li><a href="#">Tricot</a></li>
-                <li><a href="#">Projets personnels</a></li>
-            </ul>
-            <form class="barre-recherche">
-                <input type="search" id="recherche" placeholder="Recherche...">
-                <button>
-                    <span class="fas fa-search"></span>
-                </button>
-            </form> 
+            <?php include 'assets/php/navbar.php'; ?>
         </nav>
     </header>
 
     <main>
-        <section class="home">
-            <h2><a href="#">Patrons de crochet</a></h2>
-            <img src="assets/flowers_homepage.png" alt="Patrons de crochet"/>
+        <section class="carrousel">
+            <div class="container-carroussel">
+               
+                <img src="assets/pics/flowers_homepage.png" alt="Patrons de crochet"/>
+            </div>
+            
         </section>
     </main>
    
@@ -53,6 +37,6 @@
         <p>php -S localhost:8000</p>
     </footer>
 
-    <script src="assets/js/main.js" type="module"></script>
+    
 </body>
 </html>
