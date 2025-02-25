@@ -28,6 +28,7 @@
     <main>
         <section>
             <h2>en cours</h2>
+            <p>en cours d'inspi de home page </p>
         </section>
     </main>
    
