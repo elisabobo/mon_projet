@@ -11,6 +11,7 @@
     
     <!--POLICE -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style_crochet.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Krochet & Cnit</title>
@@ -27,7 +28,8 @@
 
     <main>
         <section>
-            <h2>en cours</h2>
+            <button>Ajouter un patron</button>
+            
         </section>
     </main>
    

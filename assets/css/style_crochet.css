@@ -1,0 +1,21 @@
+section{
+    display: flex;
+    justify-content: center;
+
+}
+button{
+    margin: 20px;
+    padding: 8px;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(250, 173, 205, 0.95);
+
+}
+
+button:hover{
+    background-color: rgba(255, 129, 181, 0.95);
+    
+}
