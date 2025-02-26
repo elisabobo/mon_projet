@@ -15,3 +15,4 @@ if (strlen($title)<=250 || $title== '' || $description == ''){
 $pattern= new Pattern();
 
 $pattern->save($title, $description);
+header('Location: ../../index.php');
