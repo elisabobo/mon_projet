@@ -27,8 +27,10 @@
     </header>
 
     <main>
+       
         <section>
-            <button>Ajouter un patron</button>
+            <button id="myBtn">Ajouter un patron</button>
+            <?php include 'assets/php/modal.php'; ?>
             
         </section>
     </main>
