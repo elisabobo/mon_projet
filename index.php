@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Krochet & Cnit</title>
-    <script src="assets/js/main.js" type="module"></script>
+    <script defer src="assets/js/main.js" type="module"></script>
 </head>
 <body>
   

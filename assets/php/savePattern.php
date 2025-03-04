@@ -3,6 +3,8 @@
 require_once 'Pattern.php';
 $title=htmlspecialchars($_POST['title']);
 $description=htmlspecialchars($_POST['description']);
+$description = htmlspecialchars($_POST['description']);
+$difficulty = htmlspecialchars($_POST['difficulte']);
 
 //faire un triple egal
 if (strlen($title)<=250 || $title== '' || $description == ''){
