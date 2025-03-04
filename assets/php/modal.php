@@ -19,6 +19,16 @@
                 </div>
                 <br>
                 <div>
+                    <label>Niveau de difficulté :</label><br>
+                    <input type="radio" id="beginner" name="difficulte" value="debutant" required>
+                    <label for="beginner">Débutant</label><br>
+                    <input type="radio" id="intermediate" name="difficulte" value="intermediaire">
+                    <label for="intermediate">Intermédiaire</label><br>
+                    <input type="radio" id="advanced" name="difficulte" value="avance">
+                    <label for="advanced">Avancé</label>
+                </div>
+                <br>
+                <div>
                     <label for="description">Description :</label>
                     <textarea id="description" name="description" required></textarea>
                 </div>
