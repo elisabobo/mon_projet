@@ -10,7 +10,7 @@ $type = isset($_POST['type']) ? htmlspecialchars($_POST['type']) : 'defaut';
 $pic = isset($_POST['pic']) ? htmlspecialchars($_POST['pic']) : 'defaut.png';
 $difficulty = htmlspecialchars($_POST['difficulte']);
 
-// Vérifier que le titre ne dépasse pas 250 caractères et que les champs obligatoires ne sont pas vides
+//vérif
 if (strlen($title) > 250 || $title === '' || $description === '') {
     header('Location: crochet.php');
     exit();
