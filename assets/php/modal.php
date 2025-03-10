@@ -50,7 +50,6 @@
         <div class="form-group">
           <button id="submit" type="submit">Envoyer</button>
         </div>
-        
       </fieldset>
     </form>
   </div>

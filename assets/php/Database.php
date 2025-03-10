@@ -11,14 +11,4 @@ class Database{
 
 }
 }
-/*
-$database = new Database();
 
-$query = $database->db->query('SELECT * FROM patterns');
-$patterns = $query->fetchAll();
-
-foreach ($patterns as $pattern) {
-    ?>
-    <li><?php echo $pattern['title']; ?></li>
-    <?php
-}*/

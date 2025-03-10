@@ -1,43 +1,66 @@
+<?php
+require_once 'assets/php/Pattern.php';
+session_start();
+
+$patternInstance = new Pattern();
+$patterns = $patternInstance->getAll();
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-    <!--Icones réseaux sociaux -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    
-    <!--POLICE -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/modal_style.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Icônes réseaux sociaux -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+  <!-- POLICE -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/modal_style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Krochet & Cnit</title>
-    <script defer src="assets/js/main.js" type="module"></script>
+  <title>Krochet & Cnit</title>
 </head>
 <body>
-  
-    <header> 
-        <nav>
-            <!-- NAVBAR -->
-            <?php include 'assets/php/navbar.php'; ?>
-        </nav>
-    </header>
+  <header> 
+    <nav>
+      <!-- NAVBAR -->
+      <?php include 'assets/php/navbar.php'; ?>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <button id="myBtn">Ajouter un patron</button>
-            <?php include 'assets/php/modal.php'; ?>
-            
-        </section>
-    </main>
+  <main>
+    <section>
+      <!-- Bouton d'ouverture du modal pour ajouter un patron -->
+      <button id="myBtn">Ajouter un patron</button>
+      <?php include 'assets/php/modal.php'; ?>
+    </section>
+    <ul>
+      <?php foreach($patterns as $pattern): ?>
+      <li>
+        <article>
+          <img src="assets/pics/pattern_img/<?php echo htmlspecialchars($pattern['pic']); ?>" alt="<?php echo htmlspecialchars($pattern['title']); ?>">
+          <h2><?php echo htmlspecialchars($pattern['title']); ?></h2>
+          <p><?php echo nl2br(htmlspecialchars($pattern['text'])); ?></p>
+          <p>Type : <?php echo htmlspecialchars($pattern['type']); ?></p>
+          <p>Difficulté : <?php echo htmlspecialchars($pattern['difficulty']); ?></p>
+          <a href="delete.php?id=<?php echo $pattern['id']; ?>" onclick="return confirm('Voulez-vous vraiment supprimer cet article ?');">Supprimer</a>
+        </article>
+      </li>
+      <?php endforeach; ?>
+    </ul>
+  </main>
    
-    <footer>
-        <?php include 'assets/php/footer.php'; ?>  
-    </footer>
+  <footer>
+    <?php include 'assets/php/footer.php'; ?>  
+  </footer>
 
-    
+  <script defer src="assets/js/main.js" type="module"></script>
 </body>
 </html>
