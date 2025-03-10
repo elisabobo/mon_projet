@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Code pour la navigation
+//burger menu
   const navToggle = document.getElementById('nav-toggle');
   const navMenu = document.getElementById('nav-menu');
   navToggle.addEventListener('click', function () {
@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', function () {
       navToggle.classList.toggle('active');
   });
 
-  // Code pour le modal
+
   var modal = document.getElementById("myModal");
   var btn = document.getElementById("myBtn");
   var span = document.getElementsByClassName("close")[0];
 
-  // Vérifier si le bouton existe avant d'y attacher un événement
+
   if(btn) {
       btn.onclick = function() {
         modal.style.display = "block";
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function closeModal() {
-      // Réinitialiser le formulaire contenu dans la modal
+
       var form = modal.querySelector('form');
       if(form){
           form.reset();
@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
       console.error("L'élément avec la classe 'close' est introuvable.");
   }
 
-  // Fermer la modal si on clique à l'extérieur
   window.onclick = function(event) {
     if (event.target == modal) {
       closeModal();
