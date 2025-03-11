@@ -45,7 +45,7 @@ error_reporting(E_ALL);
       <?php foreach($patterns as $pattern): ?>
       <li>
         <article>
-          <img src="assets/pics/pattern_img/<?php echo htmlspecialchars($pattern['pic']); ?>" alt="<?php echo htmlspecialchars($pattern['title']); ?>">
+          <img src="assets/php/<?php echo htmlspecialchars($pattern['pic']); ?>" alt="<?php echo htmlspecialchars($pattern['title']); ?>">
           <h2><?php echo htmlspecialchars($pattern['title']); ?></h2>
           <p><?php echo nl2br(htmlspecialchars($pattern['text'])); ?></p>
           <p>Type : <?php echo htmlspecialchars($pattern['type']); ?></p>

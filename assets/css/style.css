@@ -43,15 +43,6 @@ nav form {
     width: 240px;
     display: flex;
     align-items: center;
-
-    input{
-        height: 100%;
-        width: 200px;
-        border: none;
-        padding: 0 10px;
-        border-radius: 5px 0 0 5px;
-
-    }
 }
 
 ul.nav-item{
@@ -68,18 +59,9 @@ h1 {
 
 }
 form button {
-    height: 100%;
-    width: 40px;
-    line-height: 40px;
-
     background-color: rgb(250, 153, 169);
-    /*courber le bord que sur le côté droit*/
     border-radius: 0 5px 5px 0;
     border:none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 
 form button:hover{
@@ -128,11 +110,6 @@ footer{
     margin: 0 10px; 
     text-decoration: none;
     font-size: 24px;
-
-    :hover{
-        color: black;
-
-    }
 }
 
 
@@ -177,7 +154,6 @@ footer{
         display: flex;
     }
   }
-
-
+ 
 
  
