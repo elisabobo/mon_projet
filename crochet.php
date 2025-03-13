@@ -42,22 +42,17 @@ error_reporting(E_ALL);
       <?php include 'assets/php/modal.php'; ?>
     </section>
     <ul class="patterns">
-      <?php foreach($patterns as $pattern): ?>
-      <li>
-        <article>
-        <img src="assets/php/<?php echo htmlspecialchars($pattern['pic']); ?>" ...>
+  <?php foreach($patterns as $pattern): ?>
+  <li>
+    <article class="pattern-card">
+      <h2 class="pattern-title"><?php echo htmlspecialchars($pattern['title']); ?></h2>
+      <img src="assets/php/<?php echo htmlspecialchars($pattern['pic']); ?>" ...>
+      <a href="assets/php/Pattern.php?delete_id=<?php echo $pattern['id']; ?>" onclick="return confirm('Voulez-vous vraiment supprimer cet article ?');">Supprimer</a>
+    </article>
+  </li>
+  <?php endforeach; ?>
+</ul>
 
-          <h2><?php echo htmlspecialchars($pattern['title']); ?></h2>
-          <p><?php echo nl2br(htmlspecialchars($pattern['text'])); ?></p>
-          <p>Type : <?php echo htmlspecialchars($pattern['type']); ?></p>
-          <p>Difficulté : <?php echo htmlspecialchars($pattern['difficulty']); ?></p>
-          <a href="assets/php/Pattern.php?delete_id=<?php echo $pattern['id']; ?>" onclick="return confirm('Voulez-vous vraiment supprimer cet article ?');">Supprimer</a>
-
-
-        </article>
-      </li>
-      <?php endforeach; ?>
-    </ul>
   </main>
   <footer>
     <?php include 'assets/php/footer.php'; ?> 
