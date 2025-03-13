@@ -13,7 +13,7 @@
     <li><a href="#">Projets personnels</a></li>
 </ul>
 
-<form>
+<form class="form_recherche">
     <input type="search" placeholder="Recherche...">
     <button type="submit">
         <span class="fas fa-search"></span>

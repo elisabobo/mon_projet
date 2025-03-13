@@ -1,4 +1,20 @@
 /* Modal */
+section{
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+}
+#myBtn{
+    font-size: 1rem;
+    background-color: #f47288;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: center;
+
+}
 .modal {
     display: none; 
     position: fixed;
@@ -109,8 +125,7 @@ input[type="file"]:focus {
 }
 
 /* Bouton Envoyer */
-button,
-#submit {
+.form-group button {
     background-color: #f47288;
     color: #fff;
     padding: 12px 20px;
@@ -122,8 +137,8 @@ button,
     align-self: center;
 }
 
-button:hover,
-#submit:hover {
+button:hover, #myBtn:hover
+{
     background-color: #f48e9f;
 }
 

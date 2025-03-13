@@ -38,11 +38,36 @@ ul.nav-item a:hover{
     color: rgb(244, 172, 197);
     background-color: rgb(255, 230, 241);
 }
-nav form {
+
+/*BARRE DE RECHERCHE DANS LA NAVBAR*/
+.form_recherche {
     height: 30px;
     width: 240px;
     display: flex;
     align-items: center;
+
+    input{
+        height: 100%;
+        width: 200px;
+        border: none;
+        padding: 0 10px;
+        border-radius: 5px 0 0 5px;
+
+    }
+    button{
+        height: 100%;
+        width: 40px;
+        line-height: 40px;
+        background-color: rgb(250, 153, 169);
+        /*courber le bord que sur le côté droit*/
+        border-radius: 0 5px 5px 0;
+        border:none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
 }
 
 ul.nav-item{
@@ -58,13 +83,14 @@ h1 {
     font-weight: 700;
 
 }
-form button {
+.form_recherche button {
     background-color: rgb(250, 153, 169);
     border-radius: 0 5px 5px 0;
     border:none;
+    cursor: pointer;
 }
 
-form button:hover{
+.form_recherche button:hover{
     background-color: rgb(244, 142, 159);
 }
 
@@ -152,8 +178,5 @@ footer{
 
     ul.nav-item.active {
         display: flex;
-    }
-  }
- 
+    }}
 
- 
