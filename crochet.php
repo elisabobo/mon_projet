@@ -28,7 +28,7 @@ error_reporting(E_ALL);
   <title>Krochet & Cnit</title>
 </head>
 <body>
-  <header> 
+  <header>
     <nav>
       <!-- NAVBAR -->
       <?php include 'assets/php/navbar.php'; ?>
@@ -41,24 +41,26 @@ error_reporting(E_ALL);
       <button id="myBtn">Ajouter un patron</button>
       <?php include 'assets/php/modal.php'; ?>
     </section>
-    <ul>
+    <ul class="patterns">
       <?php foreach($patterns as $pattern): ?>
       <li>
         <article>
-          <img src="assets/php/<?php echo htmlspecialchars($pattern['pic']); ?>" alt="<?php echo htmlspecialchars($pattern['title']); ?>">
+        <img src="assets/php/<?php echo htmlspecialchars($pattern['pic']); ?>" ...>
+
           <h2><?php echo htmlspecialchars($pattern['title']); ?></h2>
           <p><?php echo nl2br(htmlspecialchars($pattern['text'])); ?></p>
           <p>Type : <?php echo htmlspecialchars($pattern['type']); ?></p>
           <p>Difficulté : <?php echo htmlspecialchars($pattern['difficulty']); ?></p>
-          <a href="delete.php?id=<?php echo $pattern['id']; ?>" onclick="return confirm('Voulez-vous vraiment supprimer cet article ?');">Supprimer</a>
+          <a href="assets/php/Pattern.php?delete_id=<?php echo $pattern['id']; ?>" onclick="return confirm('Voulez-vous vraiment supprimer cet article ?');">Supprimer</a>
+
+
         </article>
       </li>
       <?php endforeach; ?>
     </ul>
   </main>
-   
   <footer>
-    <?php include 'assets/php/footer.php'; ?>  
+    <?php include 'assets/php/footer.php'; ?> 
   </footer>
 
   <script defer src="assets/js/main.js" type="module"></script>

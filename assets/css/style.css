@@ -1,5 +1,6 @@
 html{
     background-color: rgb(251, 223, 237);
+    overflow-x: hidden;
 }
 body {
     margin: 0;
@@ -15,7 +16,6 @@ nav{
     justify-content: center;
     align-items: center; /*meme largeur en haut et en bas*/
     flex-wrap: wrap;
-     
 
 }
 
@@ -119,6 +119,22 @@ h1 {
     display: block;
 }
 
+/*CSS SUR LES PATRONS*/
+
+ul.patterns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li{
+        flex: 0 0 calc(1/3% - 20px); /* 1/3% de largeur - marge */
+        margin: 10px;
+        box-sizing: border-box;
+    }
+}
 /*FOOTER*/
 footer{
     text-align: center;
@@ -178,5 +194,37 @@ footer{
 
     ul.nav-item.active {
         display: flex;
-    }}
+    }
+
+    /*affichage patron*/
+    ul.patterns li {
+        flex: 0 0 calc(100% - 20px);
+        margin: 10px;
+
+        article {
+            background-color: #fff;
+            color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 200px;         /* Hauteur fixe pour uniformiser */
+                object-fit: cover;     /* Permet de recadrer l'image pour remplir l'espace */
+                border-radius: 10px;
+                margin-bottom: 10px;
+}
+            h2 {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+}
+}
+
+}
 

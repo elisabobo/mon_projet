@@ -1,5 +1,4 @@
 <?php
-
 require_once 'Database.php';
 
 class Pattern extends Database
@@ -40,7 +39,22 @@ class Pattern extends Database
 
     public function delete($id) {
         $stmt = $this->db->prepare("DELETE FROM patterns WHERE id = :id");
-        $stmt->bindValue(':id', $id);
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
     }
+
+
+    public static function handleDeletion() {
+        if (isset($_GET['delete_id'])) {
+            $id = intval($_GET['delete_id']);
+            $patternInstance = new self();
+            $patternInstance->delete($id);
+            header('Location: ../../crochet.php'); // Ajustez le chemin si nécessaire
+            exit();
+        }
+    }
 }
+
+
+Pattern::handleDeletion();
+?>
