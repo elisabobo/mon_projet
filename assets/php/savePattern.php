@@ -7,7 +7,7 @@ include_once 'Pattern.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $errors = [];
 
-    // Validation du type de patron (doit être "crochet" ou "tricot")
+    // Validation du type de patron 
     if (empty($_POST['type']) || !in_array($_POST['type'], ['crochet', 'tricot'])) {
         $errors[] = "Type de patron invalide.";
     } else {
@@ -21,30 +21,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $title = trim($_POST['title']);
     }
 
-    // Validation du niveau de difficulté (doit être "debutant", "intermediaire" ou "avance")
     if (empty($_POST['difficulte']) || !in_array($_POST['difficulte'], ['debutant', 'intermediaire', 'avance'])) {
         $errors[] = "Niveau de difficulté invalide.";
     } else {
-        // On passe en variable $difficulty pour être en accord avec la méthode de la classe
         $difficulty = $_POST['difficulte'];
     }
 
-    // Validation de la description
     if (empty(trim($_POST['description']))) {
         $errors[] = "La description est requise.";
     } else {
         $description = trim($_POST['description']);
     }
 
-    // Traitement de l'image (facultative)
     $imagePath = "";
     if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
-        // Autoriser uniquement certains formats d'images
             $uploadDir = 'uploads/';
             if (!is_dir($uploadDir)) {
                 mkdir($uploadDir, 0755, true);
             }
-            // Pour éviter les collisions, on ajoute un timestamp au nom du fichier
             $fileName = basename($_FILES['image']['name']);
             $targetPath = $uploadDir . time() . '_' . $fileName;
             if (!move_uploaded_file($_FILES['image']['tmp_name'], $targetPath)) {
@@ -54,16 +48,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
     
     }
-
-    // Affichage des erreurs si présentes
     if (!empty($errors)) {
         foreach ($errors as $error) {
             echo "<p style='color:red;'>$error</p>";
         }
         exit;
     }
-
-    // Insertion dans la base SQLite en utilisant la classe Pattern
     try {
         $pattern = new Pattern();
         $pattern->save($title, $description, $type, $imagePath, $difficulty);
