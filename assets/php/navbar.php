@@ -11,6 +11,7 @@
     <li><a href="crochet.php">Crochet</a></li>
     <li><a href="#">Tricot</a></li>
     <li><a href="#">Projets personnels</a></li>
+    <li><a href="#">Se connecter</a></li>
 </ul>
 
 <form class="form_recherche">

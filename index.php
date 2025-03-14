@@ -1,3 +1,6 @@
+<?php
+require_once 'assets/locales/fr.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,6 @@
     <script defer src="assets/js/main.js" type="module"></script>
 </head>
 <body>
-  
     <header> 
         <nav>
             <!-- NAVBAR -->
