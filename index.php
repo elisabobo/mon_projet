@@ -1,5 +1,6 @@
 <?php
-require_once 'assets/locales/fr.php'
+require_once 'assets/locales/fr.php';
+require_once 'assets/locales/trad.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

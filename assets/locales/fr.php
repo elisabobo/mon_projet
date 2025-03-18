@@ -10,6 +10,10 @@ $t=[
         'desc'=> 'Description',
         'supp'=> 'Supprimer'
     ],
+    'footer'=>[
+        'auteur'=> 'Auteur',
+
+    ],
     'modal'=>[
         'type_patron'=> 'Choisissez le type de patron :',
         'option'=> 'Choisissez une option',
@@ -23,5 +27,6 @@ $t=[
         'articles'=> 'Articles',
         'projects'=> 'Projets personnels',
         'login'=> 'Se connecter',
+        'rech'=> 'Recherche'
     ]
 ];

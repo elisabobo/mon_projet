@@ -7,15 +7,15 @@
 </div>
 
 <ul class="nav-item" id="nav-menu">
-    <li><a href="#">Articles</a></li>
-    <li><a href="crochet.php">Crochet</a></li>
-    <li><a href="#">Tricot</a></li>
-    <li><a href="#">Projets personnels</a></li>
-    <li><a href="#">Se connecter</a></li>
+    <li><a href="#"><?= $t['nav']['articles']?></a></li>
+    <li><a href="crochet.php"><?= $t['core']['crochet']?></a></li>
+    <li><a href="#"><?= $t['core']['tricot']?></a></li>
+    <li><a href="#"><?= $t['nav']['projects']?></a></li>
+    <li><a href="#"><?= $t['nav']['login']?></a></li>
 </ul>
 
 <form class="form_recherche">
-    <input type="search" placeholder="Recherche...">
+    <input type="search" placeholder=<?= $t['nav']['rech']?>>
     <button type="submit">
         <span class="fas fa-search"></span>
     </button>
