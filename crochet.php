@@ -42,13 +42,13 @@ error_reporting(E_ALL);
       <button id="myBtn"><?= $t['core']['ajout']?></button>
       <?php include 'assets/php/modal.php'; ?>
     </section>
-    <ul class="patterns">
+  <ul class="patterns">
   <?php foreach($patterns as $pattern): ?>
   <li>
     <article class="pattern-card">
       <h2 class="pattern-title"><?php echo htmlspecialchars($pattern['title']); ?></h2>
-      <img src="assets/php/<?php echo htmlspecialchars($pattern['pic']); ?>" ...>
-      <a href="assets/php/Pattern.php?delete_id=<?php echo $pattern['id']; ?>" onclick="return confirm('Voulez-vous vraiment supprimer cet article ?');"><?= $t['core']['supp']?></a>
+      <img class="pattern-image" src="assets/php/<?php echo htmlspecialchars($pattern['pic']); ?>" ...>
+      <a class="pattern-delete" href="assets/php/Pattern.php?delete_id=<?php echo $pattern['id']; ?>" onclick="return confirm('Voulez-vous vraiment supprimer cet article ?');"><?= $t['core']['supp']?></a>
     </article>
   </li>
   <?php endforeach; ?>

@@ -7,14 +7,14 @@ include_once 'Pattern.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $errors = [];
 
-    // Validation du type de patron 
+    
     if (empty($_POST['type']) || !in_array($_POST['type'], ['crochet', 'tricot'])) {
         $errors[] = "Type de patron invalide.";
     } else {
         $type = $_POST['type'];
     }
 
-    // Validation du titre
+
     if (empty(trim($_POST['title']))) {
         $errors[] = "Le titre est requis.";
     } else {
