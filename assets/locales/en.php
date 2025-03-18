@@ -3,10 +3,12 @@
 $t=[
     'core'=>[
         'crochet'=> 'Crochet',
-        'knitting'=> 'Knitting',
+        'tricot'=> 'Knitting',
         'titre'=>'Title',
         'image'=>'Picture',
         'ajout'=> 'Add a pattern',
+        'desc'=> 'Description',
+        'supp'=> 'Delete',
     ],
     'modal'=>[
         'type_patron'=> 'Pick the pattern type :',

@@ -1,5 +1,6 @@
 <?php
 require_once 'assets/php/Pattern.php';
+require_once 'assets/locales/trad.php';
 session_start();
 
 $patternInstance = new Pattern();
@@ -38,7 +39,7 @@ error_reporting(E_ALL);
   <main>
     <section>
       <!-- Bouton d'ouverture du modal pour ajouter un patron -->
-      <button id="myBtn">Ajouter un patron</button>
+      <button id="myBtn"><?= $t['core']['ajout']?></button>
       <?php include 'assets/php/modal.php'; ?>
     </section>
     <ul class="patterns">
@@ -47,7 +48,7 @@ error_reporting(E_ALL);
     <article class="pattern-card">
       <h2 class="pattern-title"><?php echo htmlspecialchars($pattern['title']); ?></h2>
       <img src="assets/php/<?php echo htmlspecialchars($pattern['pic']); ?>" ...>
-      <a href="assets/php/Pattern.php?delete_id=<?php echo $pattern['id']; ?>" onclick="return confirm('Voulez-vous vraiment supprimer cet article ?');">Supprimer</a>
+      <a href="assets/php/Pattern.php?delete_id=<?php echo $pattern['id']; ?>" onclick="return confirm('Voulez-vous vraiment supprimer cet article ?');"><?= $t['core']['supp']?></a>
     </article>
   </li>
   <?php endforeach; ?>

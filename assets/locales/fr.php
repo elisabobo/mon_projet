@@ -3,15 +3,17 @@
 $t=[
     'core'=>[
         'crochet'=> 'Crochet',
-        'knitting'=> 'Tricot',
+        'tricot'=> 'Tricot',
         'titre'=>'Titre',
         'image'=>'Image',
         'ajout'=> 'Ajouter un patron',
+        'desc'=> 'Description',
+        'supp'=> 'Supprimer'
     ],
     'modal'=>[
         'type_patron'=> 'Choisissez le type de patron :',
-        'option'=> 'Choisissez une option :',
-        'niveau'=> 'Niveau de difficulté :',
+        'option'=> 'Choisissez une option',
+        'niveau'=> 'Niveau de difficulté',
         'debutant'=>'Débutant',
         'intermediaire'=>'Intermédiaire',
         'avance'=> 'Avancé',
