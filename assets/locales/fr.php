@@ -18,6 +18,9 @@ $t=[
         'email'=> 'Courriel',
         'login'=>'Se connecter',
         'passphrase'=>'Phrase de passe',
+        'pascompte'=> 'Pas de compte',
+        'creer'=> 'S\'inscrire',
+        
     ],
     'modal'=>[
         'type_patron'=> 'Choisissez le type de patron :',

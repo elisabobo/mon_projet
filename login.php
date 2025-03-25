@@ -1,6 +1,6 @@
 <?php
 require_once 'assets/locales/trad.php';
-session_start();
+require_once 'assets/php/session.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -8,7 +8,8 @@ session_start();
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/login_style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
   <title>Krochet & Cnit - Login</title>
 </head>
 <body>
@@ -16,6 +17,7 @@ session_start();
   <form action="/assets/php/login.php" method="post" aria-describedby="loginInfo">
     <h1><?= $t['login']['login'] ?></h1>
 
+    <div class="container">
     <?php if (isset($_SESSION['error'])): ?>
       <p id="loginInfo" style="color: red"><?= $_SESSION['error'] ?></p>
       <?php unset($_SESSION['error']); ?>
@@ -28,6 +30,8 @@ session_start();
     <input type="password" name="passphrase" id="passphrase" required>
 
     <button type="submit"><?= $t['login']['login'] ?></button>
+    <p><?= $t['login']['pascompte'] ?> ? <a href="/register.php"><?= $t['login']['creer'] ?></a></p>
+    </div>
   </form>
 
 </body>

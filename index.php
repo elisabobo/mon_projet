@@ -25,7 +25,7 @@ require_once 'assets/php/session.php';
     <header> 
         <nav>
             <!-- NAVBAR -->
-            <?php include '/assets/php/navbar.php'; ?>
+            <?php include 'assets/php/navbar.php'; ?>
         </nav>
     </header>
 
@@ -35,9 +35,9 @@ require_once 'assets/php/session.php';
             <p>en cours d'inspi de home page </p>
         </section>
     </main>
-   
+
     <footer>
-        <?php include '/assets/php/footer.php'; ?>  
+        <?php include 'assets/php/footer.php'; ?>
     </footer>
 
     

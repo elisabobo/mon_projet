@@ -18,6 +18,8 @@ $t=[
         'email'=> 'Email',
         'login'=>'Login',
         'passphrase'=>'Password',
+        'pascompte'=> 'No account',
+        'creer'=> 'Sign up',
     ],
     'modal'=>[
         'type_patron'=> 'Pick the pattern type :',
