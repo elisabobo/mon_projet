@@ -14,6 +14,11 @@ $t=[
         'auteur'=> 'Author',
 
     ],
+    'login'=>[
+        'email'=> 'Email',
+        'login'=>'Login',
+        'passphrase'=>'Password',
+    ],
     'modal'=>[
         'type_patron'=> 'Pick the pattern type :',
         'option'=> 'Pick an option :',

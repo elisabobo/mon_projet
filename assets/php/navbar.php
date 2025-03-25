@@ -11,7 +11,7 @@
     <li><a href="crochet.php"><?= $t['core']['crochet']?></a></li>
     <li><a href="#"><?= $t['core']['tricot']?></a></li>
     <li><a href="#"><?= $t['nav']['projects']?></a></li>
-    <li><a href="#"><?= $t['nav']['login']?></a></li>
+    <li><a href="login.php"><?= $t['nav']['login']?></a></li>
 </ul>
 
 <form class="form_recherche">

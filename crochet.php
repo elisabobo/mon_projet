@@ -47,7 +47,7 @@ error_reporting(E_ALL);
   <li>
     <article class="pattern-card">
       <h2 class="pattern-title"><?php echo htmlspecialchars($pattern['title']); ?></h2>
-      <img class="pattern-image" src="assets/php/<?php echo htmlspecialchars($pattern['pic']); ?>" ...>
+      <img alt="" class="pattern-image" src="assets/php/<?php echo htmlspecialchars($pattern['pic']); ?>" ...>
       <a class="pattern-delete" href="assets/php/Pattern.php?delete_id=<?php echo $pattern['id']; ?>" onclick="return confirm('Voulez-vous vraiment supprimer cet article ?');"><?= $t['core']['supp']?></a>
     </article>
   </li>

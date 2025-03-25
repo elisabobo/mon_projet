@@ -14,6 +14,11 @@ $t=[
         'auteur'=> 'Auteur',
 
     ],
+    'login'=>[
+        'email'=> 'Courriel',
+        'login'=>'Se connecter',
+        'passphrase'=>'Phrase de passe',
+    ],
     'modal'=>[
         'type_patron'=> 'Choisissez le type de patron :',
         'option'=> 'Choisissez une option',

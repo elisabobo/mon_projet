@@ -3,9 +3,12 @@ require_once 'Database.php';
 
 class Pattern extends Database
 {
+    private string $path;
     public function __construct() {
         parent::__construct();
         
+        $this->path = $_SERVER['DOCUMENT_ROOT'] . '/assets/pics/pattern_img';
+
         $this->db->exec('CREATE TABLE IF NOT EXISTS patterns (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             type VARCHAR(100) NOT NULL,
@@ -15,6 +18,20 @@ class Pattern extends Database
             difficulty VARCHAR(50) NOT NULL
         )');
     }
+    public function getPath(): string
+    {
+        return $this->path;
+    }
+    public function saveImg(): string {
+        $time = time();
+        $type = pathinfo($_FILES['pic']['name'], PATHINFO_EXTENSION);
+        $name = "{$time}.{$type}";
+
+        move_uploaded_file($_FILES['pic']['tmp_name'], "{$this->path}/{$name}");
+
+        return $name;
+    }
+
 
     public function save(string $title, string $description, string $type, string $pic, string $difficulty): void {
         $statement = $this->db->prepare("INSERT INTO patterns (title, type, pic, text, difficulty) VALUES (:title, :type, :pic, :description, :difficulty)");
@@ -49,7 +66,7 @@ class Pattern extends Database
             $id = intval($_GET['delete_id']);
             $patternInstance = new self();
             $patternInstance->delete($id);
-            header('Location: ../../crochet.php'); // Ajustez le chemin si nécessaire
+            header('Location: ../../crochet.php'); 
             exit();
         }
     }
@@ -57,4 +74,3 @@ class Pattern extends Database
 
 
 Pattern::handleDeletion();
-?>
