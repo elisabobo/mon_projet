@@ -1,7 +1,9 @@
 <?php
 require_once 'assets/php/Pattern.php';
 require_once 'assets/locales/trad.php';
-session_start();
+
+require_once 'assets/php/session.php';
+
 
 $patternInstance = new Pattern();
 $patterns = $patternInstance->getAll();
@@ -23,8 +25,9 @@ error_reporting(E_ALL);
   
   <!-- POLICE -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/modal_style.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/modal_style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
 
   <title>Krochet & Cnit</title>
 </head>
@@ -56,7 +59,7 @@ error_reporting(E_ALL);
 
   </main>
   <footer>
-    <?php include 'assets/php/footer.php'; ?> 
+    <?php include 'assets/php/footer.php'; ?>
   </footer>
 
   <script defer src="assets/js/main.js" type="module"></script>

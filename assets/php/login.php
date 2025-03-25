@@ -5,6 +5,11 @@ require_once 'Security.php';
 $security = new Security();
 $isLogged = $security->login($_POST['email'], $_POST['passphrase']);
 
-$_SESSION['isLogged'] = 'true';
-
-header('Location: /');
+if ($isLogged) {
+    $_SESSION['isLogged'] = true; // optionnel si tu veux vraiment garder ce flag
+    header('Location: /');
+    exit;
+} else {
+    header('Location: /login.php?error=1');
+    exit;
+}

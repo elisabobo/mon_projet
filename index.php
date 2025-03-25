@@ -1,6 +1,7 @@
 <?php
-require_once 'assets/locales/fr.php';
 require_once 'assets/locales/trad.php';
+require_once 'assets/php/session.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,16 +16,16 @@ require_once 'assets/locales/trad.php';
     
     <!--POLICE -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
     <title>Krochet & Cnit</title>
-    <script defer src="assets/js/main.js" type="module"></script>
+    <script defer src="/assets/js/main.js" type="module"></script>
 </head>
 <body>
     <header> 
         <nav>
             <!-- NAVBAR -->
-            <?php include 'assets/php/navbar.php'; ?>
+            <?php include '/assets/php/navbar.php'; ?>
         </nav>
     </header>
 
@@ -36,7 +37,7 @@ require_once 'assets/locales/trad.php';
     </main>
    
     <footer>
-        <?php include 'assets/php/footer.php'; ?>  
+        <?php include '/assets/php/footer.php'; ?>  
     </footer>
 
     

@@ -32,6 +32,7 @@ $t=[
         'articles'=> 'Articles',
         'projects'=> 'Projets personnels',
         'login'=> 'Se connecter',
+        'logout'=> 'Se déconnecter',
         'rech'=> 'Recherche'
     ]
 ];
