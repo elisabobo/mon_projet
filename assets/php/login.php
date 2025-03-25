@@ -1,10 +1,10 @@
 <?php
-
+session_start();
 require_once 'Security.php';
 
-$email=htmlspecialchars((string)$_POST["email"]);
-$password=$_POST["password"];
-var_dump(password_hash($password,algo:PASSWORD_DEFAULT));
+$security = new Security();
+$isLogged = $security->login($_POST['email'], $_POST['passphrase']);
 
+$_SESSION['isLogged'] = 'true';
 
-$security=new Security();
+header('Location: /');
