@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = "block";
       };
   } else {
-      console.error("L'élément avec l'id 'myBtn' est introuvable.");
+      //console.error("L'élément avec l'id 'myBtn' est introuvable.");
   }
 
   function closeModal() {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if(span) {
       span.onclick = closeModal;
   } else {
-      console.error("L'élément avec la classe 'close' est introuvable.");
+      //console.error("L'élément avec la classe 'close' est introuvable.");
   }
 
   window.onclick = function(event) {

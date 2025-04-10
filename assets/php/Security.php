@@ -14,6 +14,21 @@ class Security extends Database
         )');
     }
 
+    public function getUserByEmail(string $email)
+    {
+        $stmt = $this->db->prepare('SELECT * FROM user WHERE email = :email');
+        $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
+    public function getAllUsers()
+    {
+        $stmt = $this->db->query('SELECT * FROM user');
+        return $stmt->fetchAll();  // Retourner tous les utilisateurs
+    }
+
+
     public function signIn(string $email, string $passphrase): void
     {
         $statement = $this->db->prepare("INSERT INTO user (email, passphrase) VALUES (:email, :passphrase)");

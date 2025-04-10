@@ -22,6 +22,9 @@ class Pattern extends Database
     {
         return $this->path;
     }
+    public function getDb() {
+        return $this->db;
+    }
     public function saveImg(): string {
         $time = time();
         $type = pathinfo($_FILES['pic']['name'], PATHINFO_EXTENSION);
@@ -45,6 +48,12 @@ class Pattern extends Database
 
     public function getAll() {
         return $this->db->query('SELECT * FROM patterns')->fetchAll();
+    }
+    public function getByType($type) {
+        $stmt = $this->db->prepare('SELECT * FROM patterns WHERE type = :type');
+        $stmt->bindValue(':type', $type);
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
 
     public function get(string $id) {

@@ -1,7 +1,16 @@
 <?php
 require_once 'assets/locales/trad.php';
+require_once 'assets/php/Pattern.php';
 require_once 'assets/php/session.php';
 
+$patternInstance = new Pattern();
+$patterns = $patternInstance->getAll();
+/*require_once 'assets/php/Security.php';
+$security = new Security();
+$users = $security->getAllUsers(); 
+echo '<pre>';  // Pour améliorer la lisibilité du var_dump
+var_dump($users);
+echo '</pre>';*/
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -10,6 +19,7 @@ require_once 'assets/php/session.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="icon" type="image/x-icon" href="/assets/pics/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <!--Icones réseaux sociaux -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -39,7 +49,6 @@ require_once 'assets/php/session.php';
     <footer>
         <?php include 'assets/php/footer.php'; ?>
     </footer>
-
     
 </body>
 </html>

@@ -9,7 +9,7 @@
 <ul class="nav-item" id="nav-menu">
     <li><a href="#"><?= $t['nav']['articles']?></a></li>
     <li><a href="crochet.php"><?= $t['core']['crochet']?></a></li>
-    <li><a href="#"><?= $t['core']['tricot']?></a></li>
+    <li><a href="tricot.php"><?= $t['core']['tricot']?></a></li>
     <li><a href="#"><?= $t['nav']['projects']?></a></li>
     <?php if ($isLogged) : ?>
         <li>
@@ -32,7 +32,8 @@
 </ul>
 
 <form class="form_recherche">
-    <input type="search" placeholder=<?= $t['nav']['rech']?>>
+    <input type="search" id="searchInput" placeholder=<?= $t['nav']['rech']?> />
+    <ul id="suggestions"></ul> 
     <button type="submit">
         <span class="fas fa-search"></span>
     </button>

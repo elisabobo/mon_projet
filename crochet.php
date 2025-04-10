@@ -6,8 +6,7 @@ require_once 'assets/php/session.php';
 
 
 $patternInstance = new Pattern();
-$patterns = $patternInstance->getAll();
-
+$patterns = $patternInstance->getByType('crochet');
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -18,7 +17,7 @@ error_reporting(E_ALL);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <link rel="icon" type="image/x-icon" href="/assets/pics/favicon.png">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
   <!-- Icônes réseaux sociaux -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -61,7 +60,7 @@ error_reporting(E_ALL);
   <footer>
     <?php include 'assets/php/footer.php'; ?>
   </footer>
-
+  <script defer src="assets/js/getPattern.js" type="module"></script>
   <script defer src="assets/js/main.js" type="module"></script>
 </body>
 </html>

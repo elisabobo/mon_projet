@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once 'Security.php';
 
 $email = htmlspecialchars($_POST['email']);
@@ -9,8 +8,13 @@ $security = new Security();
 
 try {
     $security->signIn($email, $hashedPassword);
-    header("Location: /login.php?signup=success");
+    
+    $user = $security->getUserByEmail($email);  
+    $_SESSION['id'] = $user['id'];  
+
+    header("Location: /index.php");
     exit;
+
 } catch (PDOException $e) {
     $_SESSION['error'] = "L'adresse e-mail est déjà utilisée.";
     header('Location: /register.php');

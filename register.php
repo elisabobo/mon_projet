@@ -10,6 +10,7 @@ require_once 'assets/php/session.php';
   <title>Inscription</title>
   <link rel="stylesheet" href="/assets/css/login_style.css">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/x-icon" href="/assets/pics/favicon.png">
   <title>Krochet & Cnit - Register</title>
 </head>
 <body>
@@ -31,7 +32,7 @@ require_once 'assets/php/session.php';
 
     <button type="submit"><?= $t['login']['creer'] ?></button>
 
-    <p>Déjà un compte ? <a href="/login.php">Se connecter</a></p>
+    <p>Déjà un compte ? <a href="/login.php"><?= $t['login']['login'] ?> </a></p>
     </div>
   </form>
 
