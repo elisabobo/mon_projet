@@ -27,9 +27,7 @@ echo '</pre>';*/
     <!--POLICE -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
-
     <title>Krochet & Cnit</title>
-    <script defer src="/assets/js/main.js" type="module"></script>
 </head>
 <body>
     <header> 
@@ -49,6 +47,7 @@ echo '</pre>';*/
     <footer>
         <?php include 'assets/php/footer.php'; ?>
     </footer>
-    
+    <script defer src="/assets/js/main.js" type="module"></script>
+    <script defer src="assets/js/getPattern.js" type="module"></script>
 </body>
 </html>

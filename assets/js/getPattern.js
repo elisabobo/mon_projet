@@ -58,7 +58,7 @@ searchInput.addEventListener('input', async () => {
     const data = await response.json();
 
     const suggestions = document.getElementById('suggestions');
-    suggestions.innerHTML = ''; 
+    suggestions.innerHTML = '';
 
     data.forEach(pattern => {
       const suggestionItem = document.createElement('li');

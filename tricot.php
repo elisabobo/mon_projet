@@ -34,7 +34,6 @@ $patterns = $patternInstance->getByType('tricot');
     <main>
     <section>
         <!-- Bouton d'ouverture du modal pour ajouter un patron -->
-        <button id="myBtn"><?= $t['core']['ajout']?></button>
         <?php include 'assets/php/modal.php'; ?>
     </section>
     <section>
@@ -57,6 +56,7 @@ $patterns = $patternInstance->getByType('tricot');
 
         <script defer src="assets/js/getPattern.js" type="module"></script>
         <script defer src="assets/js/main.js" type="module"></script>
+        <script defer src="/assets/js/modal.js" type="module"></script>
 </body>
 </html>
 

@@ -30,12 +30,11 @@
       <a href="/lang.php?lang=en">🇬🇧</a>
     </li>
 </ul>
-
 <form class="form_recherche">
     <input type="search" id="searchInput" placeholder=<?= $t['nav']['rech']?> />
-    <ul id="suggestions"></ul> 
     <button type="submit">
         <span class="fas fa-search"></span>
     </button>
+    <ul id="suggestions" class="suggestions-list"></ul> 
 </form>
 

@@ -41,7 +41,6 @@ error_reporting(E_ALL);
   <main>
     <section>
       <!-- Bouton d'ouverture du modal pour ajouter un patron -->
-      <button id="myBtn"><?= $t['core']['ajout']?></button>
       <?php include 'assets/php/modal.php'; ?>
     </section>
   <ul class="patterns">
@@ -62,5 +61,6 @@ error_reporting(E_ALL);
   </footer>
   <script defer src="assets/js/getPattern.js" type="module"></script>
   <script defer src="assets/js/main.js" type="module"></script>
+  <script defer src="/assets/js/modal.js" type="module"></script>
 </body>
 </html>

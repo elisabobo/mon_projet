@@ -1,4 +1,4 @@
-<div id="myModal" class="modal">
+<dialog id="myModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
     <form action="assets/php/savePattern.php" method="post" enctype="multipart/form-data">
@@ -53,4 +53,5 @@
       </div>
     </form>
   </div>
-</div>
+</dialog>
+<button id="myBtn"><?= $t['core']['ajout']?></button>

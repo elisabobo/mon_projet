@@ -20,13 +20,13 @@ main{
 nav{
     background-color: #F8C8DC;
     padding: 10px 40px 10px 70px;
-    
     display : flex;
     justify-content: center;
     align-items: center; /*meme largeur en haut et en bas*/
     flex-wrap: wrap;
 
 }
+
 
 h1 a{
     text-decoration: none;
@@ -54,6 +54,8 @@ ul.nav-item a:hover{
     width: 240px;
     display: flex;
     align-items: center;
+    position: relative;
+
 
     input{
         height: 100%;
@@ -98,10 +100,25 @@ h1 {
     border:none;
     cursor: pointer;
 }
-
-.form_recherche button:hover{
-    background-color: rgb(244, 142, 159);
+/*AUTOCOMPLETION BARRE DE RECHERCHE*/
+#suggestions {
+    border-top: 1px solid #999;
+    padding: 15px 10px;
+    position: absolute;
+    top: 100%;
+    width: 75%;
+    background-color: #fff;
+    /*display: none; Caché par défaut */
+    z-index: 999;
+    li{
+        list-style: none;
+        border-radius: 3px;
+        padding: 15px 10px;
+        cursor: pointer;
+        color: black;
+    }
 }
+
 
 /*MENU BURGER*/
 .nav_toggle{
@@ -139,11 +156,11 @@ h1 {
     flex-wrap: wrap;
     gap : 20px;
     list-style: none;
-    Justify-content : start;
+    Justify-content : flex-start;
 }
 
 .patterns li {
-    width: 100%;
+    width: calc(40% - 20px);
     max-width: 400px;
     display: flex;
     justify-content: center;

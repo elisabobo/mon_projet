@@ -23,7 +23,7 @@ $t=[
     ],
     'modal'=>[
         'type_patron'=> 'Pick the pattern type :',
-        'option'=> 'Pick an option :',
+        'option'=> 'Pick an option',
         'niveau'=> 'Level of difficulty :',
         'debutant'=>'Beginner',
         'intermediaire'=>'Intermediate',
