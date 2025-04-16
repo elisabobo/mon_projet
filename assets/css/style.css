@@ -101,24 +101,33 @@ h1 {
     cursor: pointer;
 }
 /*AUTOCOMPLETION BARRE DE RECHERCHE*/
-#suggestions {
-    border-top: 1px solid #999;
-    padding: 15px 10px;
+.result-box {
     position: absolute;
-    top: 100%;
-    width: 75%;
+    top: 100%;  
+    left: 0;
+    width: 82%;  
     background-color: #fff;
-    /*display: none; Caché par défaut */
+    border-top: 1px solid #999;
+    display: none;
     z-index: 999;
-    li{
-        list-style: none;
-        border-radius: 3px;
-        padding: 15px 10px;
-        cursor: pointer;
-        color: black;
-    }
 }
 
+.result-box ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.result-box ul li {
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.result-box ul li:hover {
+    background: pink;
+}
 
 /*MENU BURGER*/
 .nav_toggle{
