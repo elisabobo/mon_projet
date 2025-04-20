@@ -14,12 +14,20 @@ $t=[
         'auteur'=> 'Auteur',
 
     ],
+    'index'=>[
+        'bienvenue'=>"Bienvenue sur Krochet & Cnit",
+        'decouvre'=>'Découvrez les plus beaux modèles de crochet et tricot',
+        'crochet'=>'Patrons de crochet',
+        'tricot'=>'Patrons de tricot'
+    ],
     'login'=>[
         'email'=> 'Courriel',
         'login'=>'Se connecter',
         'passphrase'=>'Phrase de passe',
         'pascompte'=> 'Pas de compte',
         'creer'=> 'S\'inscrire',
+        'email_incorrect'=>'L\'email n\'est pas enregistré.',
+        'mdp_incorrect'=>'Le mot de passe est incorrect.'
         
     ],
     'modal'=>[
@@ -37,5 +45,9 @@ $t=[
         'login'=> 'Se connecter',
         'logout'=> 'Se déconnecter',
         'rech'=> 'Recherche'
+    ],
+    'signin'=>[
+        'deja_utilise'=>'L\'adresse e-mail est déjà utilisée.',
+        'erreur_inscription'=>'erreur d\'inscription (à modifier mdrr)'
     ]
 ];

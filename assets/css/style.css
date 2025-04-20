@@ -78,6 +78,9 @@ ul.nav-item a:hover{
         align-items: center;
     
     }
+    button:hover{
+        background-color: #a84d82;
+    }
 
 }
 
@@ -153,6 +156,71 @@ h1 {
 .nav_toggle.active .nav_close{
     display: block;
 }
+
+/* SECTION ACCUEIL AVEC IMAGE DE FOND */
+.home_background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /*cache tout ce qui deborde*/
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-img {
+    /*image qui se positionn derriere*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*plage l'image sous le contenu*/
+    z-index: 0;
+    /*assombrit l'image pour faire un contraste avec le texte*/
+    filter: brightness(0.6);
+}
+
+/* Contenu au-dessus de l'image */
+.home_content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.home_content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.home_content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+/* Boutons */
+.home_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.home_btn {
+    background-color: rgb(250, 153, 169);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.home_btn:hover {
+    background-color: #a84d82;
+}
+
 
 /*CSS SUR LES PATRONS*/
 
@@ -252,6 +320,18 @@ footer{
         justify-content: center;
         width: 100%;
     }
+    .home_content h1 {
+        font-size: 2rem;
+}
+    
+.home_content p {
+        font-size: 1rem;
+    }
+    
+.home_buttons {
+        flex-direction: column;
+        gap: 15px;
+}
 
     ul.nav-item {
         display: none;

@@ -1,7 +1,7 @@
 <?php
+require_once 'assets/php/session.php';
 require_once 'assets/locales/trad.php';
 require_once 'assets/php/Pattern.php';
-require_once 'assets/php/session.php';
 
 $patternInstance = new Pattern();
 $patterns = $patternInstance->getAll();
@@ -38,12 +38,19 @@ echo '</pre>';*/
     </header>
 
     <main>
-        <section>
-            <h2>en cours</h2>
-            <p>en cours d'inspi de home page </p>
-        </section>
-    </main>
+    <section class="home_background">
+        <img src="/assets/pics/background.png" alt="" class="background-img" aria-hidden="true" />
+        <div class="home_content">
+            <h1><?=$t['index']['bienvenue']?></h1>
+            <p><?=$t['index']['decouvre']?></p>
+            <div class="home_buttons">
+                <a href="/crochet.php" class="home_btn"><?=$t['index']['crochet']?></a>
+                <a href="/tricot.php" class="home_btn"><?=$t['index']['tricot']?></a>
+            </div>
+        </div>
+</section>
 
+</main>
     <footer>
         <?php include 'assets/php/footer.php'; ?>
     </footer>

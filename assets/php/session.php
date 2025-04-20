@@ -1,3 +1,8 @@
 <?php
+
 session_start();
-$isLogged = isset($_SESSION['id']) && !empty($_SESSION['id']);
+if (!isset($_SESSION['isLogged'])) {
+    $_SESSION['isLogged'] = false;
+}
+
+$isLogged = $_SESSION['isLogged'] === 'true';

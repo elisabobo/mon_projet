@@ -14,6 +14,13 @@ class Security extends Database
         )');
     }
 
+    public function verifyPassword($email, $passphrase) {
+        $user = $this->getUserByEmail($email); 
+        if ($user) {
+            return password_verify($passphrase, $user['passphrase']);  // Utilisez 'passphrase' ici
+        }
+        return false; 
+    }
     public function getUserByEmail(string $email)
     {
         $stmt = $this->db->prepare('SELECT * FROM user WHERE email = :email');
@@ -29,32 +36,30 @@ class Security extends Database
     }
 
 
-    public function signIn(string $email, string $passphrase): void
+    public function signIn(string $email, string $passphrase)
     {
+        $hashedPassphrase = password_hash($passphrase, PASSWORD_DEFAULT);
         $statement = $this->db->prepare("INSERT INTO user (email, passphrase) VALUES (:email, :passphrase)");
+
         $statement->bindValue(':email', $email);
-        $statement->bindValue(':passphrase', $passphrase);
+        $statement->bindValue(':passphrase', $hashedPassphrase);
+
         $statement->execute();
     }
 
+
     public function login(string $email, string $passphrase): bool
     {
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
-
-        $statement = $this->db->prepare('SELECT id, passphrase FROM user WHERE email = :email');
+        $statement = $this->db->prepare('SELECT id, passphrase FROM user WHERE email=:email');
         $statement->bindValue(':email', $email);
         $statement->execute();
         $data = $statement->fetch();
 
         if (!$data) return false;
 
-        if (password_verify($passphrase, $data['passphrase'])) {
-            $_SESSION['id'] = $data['id'];
-            return true;
-        }
+        $_SESSION['id'] = $data['id'];
 
-        return false;
+        return password_verify($passphrase, $data['passphrase']);
     }
+
 }
