@@ -15,6 +15,7 @@ class Security extends Database
     }
 
     public function verifyPassword($email, $passphrase) {
+        
         $user = $this->getUserByEmail($email); 
         if ($user) {
             return password_verify($passphrase, $user['passphrase']);  // Utilisez 'passphrase' ici

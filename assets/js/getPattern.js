@@ -1,6 +1,6 @@
 const loadData = async () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const type = urlParams.get('type'); // crochet ou tricot
+  const type = urlParams.get('type');
   const apiUrl = type === 'crochet' ? 'http://localhost:8000/crochet.php' : 'http://localhost:8000/tricot.php';
 
   try {
@@ -9,7 +9,7 @@ const loadData = async () => {
 
     const main = document.querySelector('main');
     main.innerHTML = ''; 
-    
+
     data.forEach(pattern => {
       const article = document.createElement('article');
       article.classList.add('pattern-card');
@@ -47,25 +47,38 @@ searchInput.addEventListener('input', async () => {
   const url = new URL('http://localhost:8000/assets/php/search.php');
   url.searchParams.append('search', query);
 
-  const response = await fetch(url.toString());
+  try {
+    const response = await fetch(url.toString());
 
-  if (response.ok) {
+    if (!response.ok) {
+      throw new Error("Erreur dans la réponse du serveur");
+    }
+
     const data = await response.json();
-    suggestionsList.innerHTML = ''; 
+    suggestionsList.innerHTML = '';
 
     if (data.length > 0) {
-      suggestionsBox.style.display = 'block'; 
+      suggestionsBox.style.display = 'block';
 
       data.forEach(pattern => {
-        const suggestionItem = document.createElement('li');
-        suggestionItem.textContent = pattern.title;
-        suggestionsList.appendChild(suggestionItem);
+        const li = document.createElement('li');
+
+        const a = document.createElement('a');
+        a.href = `assets/php/patron.php?id=${pattern.id}`;
+        a.textContent = pattern.title;
+        a.style.textDecoration = 'none';
+        a.style.color = 'inherit';
+        a.style.display = 'block';
+        a.style.padding = '10px';
+
+        li.appendChild(a);
+        suggestionsList.appendChild(li);
       });
     } else {
       suggestionsBox.style.display = 'none';
     }
-  } else {
-    console.error('Erreur lors de la récupération des données de recherche');
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données de recherche', error);
   }
 });
 

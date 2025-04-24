@@ -5,4 +5,4 @@ if (!isset($_SESSION['isLogged'])) {
     $_SESSION['isLogged'] = false;
 }
 
-$isLogged = $_SESSION['isLogged'] === 'true';
+$isLogged = $_SESSION['isLogged'] === true;

@@ -6,7 +6,6 @@ require_once '../locales/trad.php';
 // Récupération des données de l'utilisateur
 $email = htmlspecialchars($_POST['email']);
 $passphrase = $_POST['passphrase'];
-$hashedPassword = password_hash($passphrase, PASSWORD_DEFAULT);  // Hachage du mot de passe
 
 $security = new Security();
 
@@ -19,7 +18,7 @@ try {
         exit;
     }
 
-    $security->signIn($email, $hashedPassword);
+    $security->signIn($email, $passphrase);
 
     $user = $security->getUserByEmail($email);
 

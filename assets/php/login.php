@@ -13,7 +13,6 @@ $security = new Security();
 //verif
 $user = $security->getUserByEmail($email);
 if ($user) {
-    var_dump("user existe");
     //verif mdp
     if ($security->verifyPassword($email, $passphrase)) {
        //si c ok
