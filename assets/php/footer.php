@@ -6,4 +6,4 @@
     <p><?= $t['footer']['auteur']?> : Elisa Chhay</p>
 </footer>
 
-<!--<p>php -S localhost:8000</p> -->
+<!-- php -S localhost:8000  -->

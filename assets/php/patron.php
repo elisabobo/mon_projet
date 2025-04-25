@@ -22,21 +22,31 @@ if (!$patron) {
     <meta charset="UTF-8">
     <title><?= htmlspecialchars($patron['title']) ?></title>
     <link rel="icon" type="image/x-icon" href="/assets/pics/favicon.png">
+    <link rel="stylesheet" href="/assets/css/patron_indiv_style.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script defer src="/assets/js/getPattern.js" type="module"></script>
 </head>
 <body>
-<button type="submit">
-    <i class="fa-solid fa-arrow-left" title="Next Page"></i>
+<button type="button" onclick="history.back()">
+    <i class="fa-solid fa-arrow-left"></i>
 </button>
 
-    <main class="patron-details">
-        <h1><?= htmlspecialchars($patron['title']) ?></h1>
-        <img src="/assets/php/<?= htmlspecialchars($patron['pic']) ?>" alt="<?= htmlspecialchars($patron['title']) ?>" class="pattern-image">
-        <p><?= nl2br(htmlspecialchars($patron['text'])) ?></p>
-        <p>Difficulté : <?= htmlspecialchars($patron['difficulty']) ?></p>
-    </main>
+<main>
+    <section>
+    <article>
+    <img src="/assets/php/<?= htmlspecialchars($patron['pic']) ?>" alt="<?= htmlspecialchars($patron['title']) ?>" class="pattern-image">
+
+    <div class="pattern-info">
+      <h1><?= htmlspecialchars($patron['title']) ?></h1>
+      <p>Difficulté : <?= htmlspecialchars($patron['difficulty']) ?></p>
+      <p>Description : <?= nl2br(htmlspecialchars($patron['text'])) ?></p>
+    </div>
+  </article>
+
+    </section>
+
+</main>
 
     <?php include 'footer.php'; ?>
 </body>

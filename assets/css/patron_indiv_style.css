@@ -1,0 +1,59 @@
+html, body {
+  margin: 0;
+  overflow: hidden}
+
+/*Bouton retour*/
+button{
+  all: unset;
+  top:20px;
+  left : 20px;
+  font-size: 40px;
+  cursor: pointer;
+
+}
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+}
+article{
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+h1, .pattern-info p{
+  color : black;
+}
+
+img{
+  max-width: 400px;
+  border: 1px solid black;
+}
+
+
+@media screen and (max-width: 1052px) {
+  article {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    text-align: center; 
+  }
+
+  .pattern-image {
+    max-width: 100%;
+    margin: 0 auto 1.5rem;
+  }
+
+  button {
+    font-size: 28px;
+    top: 15px;
+    left: 15px;
+  }
+}
