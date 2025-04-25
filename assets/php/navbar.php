@@ -1,3 +1,4 @@
+<nav>
 <div class="nav_top">
     <div class="nav_toggle" id="nav-toggle">
         <i class="ri-menu-line nav_burger"></i>
@@ -39,3 +40,4 @@
       <ul id="suggestions"></ul>
     </div>
 </form>
+</nav>

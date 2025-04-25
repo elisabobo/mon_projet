@@ -1,8 +1,7 @@
 <?php
-require_once '/assets/php/Pattern.php';
-require_once '/assets/locales/trad.php';
-
-require_once '/assets/php/session.php';
+require_once 'assets/php/Pattern.php';
+require_once 'assets/php/session.php';
+require_once 'assets/locales/trad.php';
 
 
 $patternInstance = new Pattern();
@@ -32,10 +31,8 @@ error_reporting(E_ALL);
 </head>
 <body>
   <header>
-    <nav>
       <!-- NAVBAR -->
       <?php include 'assets/php/navbar.php'; ?>
-    </nav>
   </header>
 
   <main>
@@ -56,11 +53,8 @@ error_reporting(E_ALL);
 </ul>
 
   </main>
-  <footer>
-    <?php include 'assets/php/footer.php'; ?>
-  </footer>
+  <?php include 'assets/php/footer.php'; ?>
   <script defer src="assets/js/getPattern.js" type="module"></script>
   <script defer src="assets/js/main.js" type="module"></script>
   <script defer src="/assets/js/modal.js" type="module"></script>
-</body>
 </html>

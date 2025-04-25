@@ -14,9 +14,9 @@ require_once 'assets/locales/trad.php';
   <title>Krochet & Cnit - Register</title>
 </head>
 <body>
-<a href="/index.php"  class="croix-fermer">
+<button class="croix-fermer" onclick="window.location.href='/index.php'">
     <i class="fa-solid fa-xmark"></i>
-</a>
+  </button>
 
   <form action="/assets/php/signIn.php" method="post">
     <h1>Créer un compte</h1>

@@ -16,9 +16,10 @@ require_once 'assets/locales/trad.php';
   <title>Krochet & Cnit - Login</title>
 </head>
 <body>
-<a href="/index.php"  class="croix-fermer">
+
+  <button class="croix-fermer" onclick="window.location.href='/index.php'">
     <i class="fa-solid fa-xmark"></i>
-</a>
+  </button>
 
   <form action="/assets/php/login.php" method="post" aria-describedby="loginInfo" autocomplete="on">
     <h1><?= $t['login']['login'] ?></h1>

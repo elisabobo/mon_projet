@@ -1,8 +1,26 @@
+
+
+/*BOUTON FERMETURE*/
+.croix-fermer {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #c368a1;
+  cursor: pointer;
+  z-index: 999;
+  padding: 0;
+}
+
+/*TITRE*/
 h1{
     text-align: center;
     margin: 40px;
     color: #c368a1;
 }
+/* barre pour rentrer le email et le mdp*/
 input[type=email], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -12,7 +30,8 @@ input[type=email], input[type=password] {
   box-sizing: border-box;
 }
 
-button {
+/*bouton pour se connecter*/
+.container button {
   background-color: #c368a1;
   color: white;
   padding: 14px 20px;
@@ -21,15 +40,7 @@ button {
   cursor: pointer;
   width: 100%;
 }
-.croix-fermer {
-  position: absolute;
-  top: 10px;
-  left: 15px;
-  font-size: 24px; 
-  color: #c368a1; 
-  text-decoration: none;
 
-}
 p a{
     color: #c368a1;;
     
@@ -45,6 +56,7 @@ p a:hover, button:hover {
 p, label{
   color: black;
 }
+/* MESSAGES D'ERREUR*/
 .error-message{
   display: flex;
   flex-direction: row;

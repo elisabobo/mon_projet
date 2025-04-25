@@ -27,9 +27,8 @@ $patterns = $patternInstance->getByType('tricot');
 </head>
 <body>
     <header>
-        <nav>
         <?php include 'assets/php/navbar.php'; ?>
-        </nav>
+
     </header>
     <main>
     <section>
@@ -50,9 +49,7 @@ $patterns = $patternInstance->getByType('tricot');
             </ul>
         </section>
     </main>
-    <footer>
     <?php include 'assets/php/footer.php'; ?>
-    </footer>
 
         <script defer src="assets/js/getPattern.js" type="module"></script>
         <script defer src="assets/js/main.js" type="module"></script>

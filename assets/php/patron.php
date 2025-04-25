@@ -23,9 +23,13 @@ if (!$patron) {
     <title><?= htmlspecialchars($patron['title']) ?></title>
     <link rel="icon" type="image/x-icon" href="/assets/pics/favicon.png">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script defer src="/assets/js/getPattern.js" type="module"></script>
 </head>
 <body>
+<button type="submit">
+    <i class="fa-solid fa-arrow-left" title="Next Page"></i>
+</button>
 
     <main class="patron-details">
         <h1><?= htmlspecialchars($patron['title']) ?></h1>

@@ -31,10 +31,8 @@ echo '</pre>';*/
 </head>
 <body>
     <header> 
-        <nav>
             <!-- NAVBAR -->
             <?php include 'assets/php/navbar.php'; ?>
-        </nav>
     </header>
 
     <main>
@@ -51,9 +49,9 @@ echo '</pre>';*/
 </section>
 
 </main>
-    <footer>
+    
         <?php include 'assets/php/footer.php'; ?>
-    </footer>
+
     <script defer src="/assets/js/main.js" type="module"></script>
     <script defer src="assets/js/getPattern.js" type="module"></script>
 </body>
