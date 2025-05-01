@@ -1,10 +1,10 @@
-<?php if (isset($_GET['status'])): ?>
-    <?php
+<?php if (isset($_GET['status'])): 
+require_once 'assets/locales/trad.php';
         $message = '';
         if ($_GET['status'] === 'deleted') {
-            $message = 'Le patron a bien été supprimé.';
+            $message = $t["notification"]["delete"];
         } elseif ($_GET['status'] === 'success' && isset($type)) {
-            $message = 'Le patron de ' . htmlspecialchars($type) . ' a bien été créé.';
+            $message = str_replace("{{type}}", htmlspecialchars($type), $t['notification']['add']);
         }
     ?>
 
