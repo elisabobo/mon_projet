@@ -56,17 +56,26 @@ class Pattern extends Database
         return $stmt->fetchAll();
     }
 
-    public function get(string $id) {
+    public function get(string $id): mixed {
         $stmt = $this->db->prepare('SELECT * FROM patterns WHERE id = :id');
         $stmt->bindValue(':id', $id);
         $stmt->execute();
         return $stmt->fetch();
     }
 
-    public function delete($id) {
-        $stmt = $this->db->prepare("DELETE FROM patterns WHERE id = :id");
+    public function delete($id): mixed {
+        $stmt = $this->db->prepare("SELECT * FROM patterns WHERE id = :id");
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
+        $pattern = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+        if ($pattern) {
+            $stmt = $this->db->prepare("DELETE FROM patterns WHERE id = :id");
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+            $stmt->execute();
+        }
+    
+        return $pattern;
     }
 
 
@@ -74,8 +83,22 @@ class Pattern extends Database
         if (isset($_GET['delete_id'])) {
             $id = intval($_GET['delete_id']);
             $patternInstance = new self();
-            $patternInstance->delete($id);
-            header('Location: ../../crochet.php'); 
+    
+            $deletedPattern = $patternInstance->delete($id);
+    
+            if ($deletedPattern && isset($deletedPattern['type'])) {
+                $type = $deletedPattern['type'];
+    
+                if ($type === 'crochet') {
+                    header('Location: ../../crochet.php?status=deleted');
+                } else {
+                    header('Location: ../../tricot.php?status=deleted');
+                }
+            } else {
+                // Si le pattern n'a pas été trouvé, redirection par défaut
+                header('Location: ../../index.php?status=not_found');
+            }
+    
             exit();
         }
     }
