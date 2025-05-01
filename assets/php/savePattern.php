@@ -17,7 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty(trim($_POST['title']))) {
         $errors[] = "Le titre est requis.";
-    } else {
+    } 
+    else if (strlen($title) > 255) {
+        $errors[] = "Le titre ne doit pas dépasser 255 caractères.";
+    }
+    else {
         $title = trim($_POST['title']);
     }
 
@@ -28,10 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $difficulty = $_POST['difficulte'];
     }
 
-    // Validation de la description
     if (empty(trim($_POST['description']))) {
         $errors[] = "La description est requise.";
-    } else {
+    } else if (strlen($description) > 1000) { 
+        $errors[] = "La description est trop longue (max. 1000 caractères).";
+    }
+    {
         $description = trim($_POST['description']);
     }
 

@@ -8,7 +8,6 @@
 </div>
 
 <ul class="nav-item" id="nav-menu">
-    <li><a href="#"><?= $t['nav']['articles']?></a></li>
     <li><a href="/crochet.php"><?= $t['core']['crochet']?></a></li>
     <li><a href="/tricot.php"><?= $t['core']['tricot']?></a></li>
     <li><a href="#"><?= $t['nav']['projects']?></a></li>

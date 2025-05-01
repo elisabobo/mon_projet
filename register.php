@@ -41,6 +41,6 @@ require_once 'assets/locales/trad.php';
     <p>Déjà un compte ? <a href="/login.php"><?= $t['login']['login'] ?> </a></p>
     </div>
   </form>
-
+  <script defer src="/assets/js/register.js" type="module"></script>
 </body>
 </html>

@@ -45,4 +45,5 @@ require_once 'assets/locales/trad.php';
   </form>
 
 </body>
+<script defer src="/assets/js/modal.js" type="module"></script>
 </html>
