@@ -27,7 +27,7 @@ error_reporting(E_ALL);
   <link rel="stylesheet" href="/assets/css/style.css">
 
 
-  <title>Krochet & Cnit</title>
+  <title>Know the Company</title>
 </head>
 <body>
   <header>
@@ -36,10 +36,12 @@ error_reporting(E_ALL);
   </header>
 
   <main>
+    
     <section>
       <!-- Bouton d'ouverture du modal pour ajouter un patron -->
       <?php include 'assets/php/modal.php'; ?>
     </section>
+    
   <ul class="patterns">
   <?php foreach($patterns as $pattern): ?>
   <li>
