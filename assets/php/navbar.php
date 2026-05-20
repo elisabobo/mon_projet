@@ -10,19 +10,6 @@
 <ul class="nav-item" id="nav-menu">
     <li><a href="/crochet.php"><?= $t['core']['crochet']?></a></li>
     <li><a href="/tricot.php"><?= $t['core']['tricot']?></a></li>
-    <?php if ($isLogged) : ?>
-        <li>
-          <a href="/logout.php">
-              <?= $t['nav']['logout'] ?>
-          </a>
-        </li>
-      <?php else: ?>
-        <li>
-          <a href="/login.php">
-              <?= $t['nav']['login'] ?>
-          </a>
-        </li>
-      <?php endif; ?>
 
     <li class="lang-switcher">
       <a href="/lang.php?lang=fr" >🇫🇷</a>

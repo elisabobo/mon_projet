@@ -1,8 +1,8 @@
 <?php
-require_once 'assets/php/session.php';
 require_once 'assets/locales/trad.php';
 require_once 'assets/php/Pattern.php';
-
+/// COPIER DANS LE TERMINAL -> php -S localhost:8000
+// COPIER DANS SAFARI -> http://localhost:8000
 $patternInstance = new Pattern();
 $patterns = $patternInstance->getAll();
 /*require_once 'assets/php/Security.php';

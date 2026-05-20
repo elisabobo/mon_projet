@@ -1,6 +1,5 @@
 <?php
 require_once 'assets/php/Pattern.php';
-require_once 'assets/php/session.php';
 require_once 'assets/locales/trad.php';
 
 
