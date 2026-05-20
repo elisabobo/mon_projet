@@ -15,19 +15,9 @@ $t=[
 
     ],
     'index'=>[
-        'bienvenue'=>"Welcome to Krochet & Cnit",
-        'decouvre'=>'Discover the finest crochet and knitting patterns',
-        'crochet'=>'Crochet patterns',
-        'tricot'=>'Knitting patterns'
-    ],
-    'login'=>[
-        'email'=> 'Email',
-        'login'=>'Login',
-        'passphrase'=>'Password',
-        'pascompte'=> 'No account',
-        'creer'=> 'Sign up',
-        'email_incorrect'=>'The email is not registered.',
-        'mdp_incorrect'=>'The password is incorrect.'
+        'bienvenue'=>"Know more about companies",
+        'decouvre'=>'Learn more about thousands of companies',
+        'bouton'=>'Discover',
     ],
     'modal'=>[
         'type_patron'=> 'Pick the pattern type :',
@@ -44,10 +34,5 @@ $t=[
         'login'=> 'Login',
         'logout'=> 'Logout',
         'rech'=> 'Search'
-    ]
-    ,
-    'signin'=>[
-        'deja_utilise'=>'The email is already in use.',
-        'erreur_inscription'=>'error of sign in'
     ]
 ];

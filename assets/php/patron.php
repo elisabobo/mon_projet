@@ -17,7 +17,7 @@ if (!$patron) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?= htmlspecialchars($lang) ?>">
 <head>
     <meta charset="UTF-8">
     <title><?= htmlspecialchars($patron['title']) ?></title>

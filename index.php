@@ -13,7 +13,7 @@ var_dump($users);
 echo '</pre>';*/
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?= htmlspecialchars($lang) ?>">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,8 +42,7 @@ echo '</pre>';*/
             <h1><?=$t['index']['bienvenue']?></h1>
             <p><?=$t['index']['decouvre']?></p>
             <div class="home_buttons">
-                <a href="/crochet.php" class="home_btn"><?=$t['index']['crochet']?></a>
-                <a href="/tricot.php" class="home_btn"><?=$t['index']['tricot']?></a>
+                <a href="/crochet.php" class="home_btn"><?=$t['index']['bouton']?></a>
             </div>
         </div>
 </section>

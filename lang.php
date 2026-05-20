@@ -1,12 +1,21 @@
 <?php
 
+$availableLangs = ['fr', 'en'];
+$lang = $_GET['lang'] ?? 'fr';
+
+if (!in_array($lang, $availableLangs, true)) {
+    $lang = 'fr';
+}
+
+$isSecure = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off');
+
 setcookie(
     'lang',
-    $_GET['lang'],
+    $lang,
     time() + 3600 * 24 * 365,
     '/',
     '',
-    true,
+    $isSecure,
     true,
 );
 

@@ -7,7 +7,7 @@ $patterns = $patternInstance->getByType('tricot');
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= htmlspecialchars($lang) ?>">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,10 +30,12 @@ $patterns = $patternInstance->getByType('tricot');
 
     </header>
     <main>
+    <!--
     <section>
-        <!-- Bouton d'ouverture du modal pour ajouter un patron -->
-        <?php include 'assets/php/modal.php'; ?>
+        Bouton d'ouverture du modal pour ajouter un patron 
+        <?php // include 'assets/php/modal.php'; ?>
     </section>
+    -->
     <section>
             <ul class="patterns">
                 <?php foreach ($patterns as $pattern): ?>
@@ -54,4 +56,3 @@ $patterns = $patternInstance->getByType('tricot');
         <script defer src="/assets/js/modal.js" type="module"></script>
 </body>
 </html>
-

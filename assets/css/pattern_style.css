@@ -39,20 +39,6 @@
     object-fit: cover; 
     border-radius: 10px;
 }
-.pattern-delete {
-    display: inline-block; 
-    margin: 20px auto 0 auto; 
-    padding: 10px 20px;
-    text-align: center;
-    color: white;
-    background-color: #5B8DEF;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-.pattern-delete:hover {
-    filter: brightness(85%);
-}
 @media screen and (max-width: 1052px){
     
     .pattern-card{

@@ -10,7 +10,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?= htmlspecialchars($lang) ?>">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,10 +37,12 @@ error_reporting(E_ALL);
 
   <main>
     
+    <!--
     <section>
-      <!-- Bouton d'ouverture du modal pour ajouter un patron -->
-      <?php include 'assets/php/modal.php'; ?>
+        Bouton d'ouverture du modal pour ajouter un patron 
+        <? //php include 'assets/php/modal.php'; ?>
     </section>
+    -->
     
   <ul class="patterns">
   <?php foreach($patterns as $pattern): ?>
