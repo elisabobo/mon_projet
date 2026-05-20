@@ -1,5 +1,5 @@
 html{
-    background-color: rgb(251, 223, 237);
+    background-color: #DDEFF3;
     overflow-x: hidden;
 }
 body {
@@ -18,7 +18,7 @@ main{
 }
 
 nav{
-    background-color: #F8C8DC;
+    background-color: #4F93A5;
     padding: 10px 40px 10px 70px;
     display : flex;
     justify-content: center;
@@ -44,8 +44,8 @@ ul.nav-item a{
 }
 
 ul.nav-item a:hover{
-    color: rgb(244, 172, 197);
-    background-color: rgb(255, 230, 241);
+    color: rgb(173, 216, 230);
+    background-color: rgb(226, 239, 248);
 }
 
 /*BARRE DE RECHERCHE DANS LA NAVBAR*/
@@ -68,7 +68,7 @@ ul.nav-item a:hover{
     height: 100%;
     width: 40px;
     line-height: 40px;
-    background-color: rgb(250, 153, 169);
+    background-color: #5B8DEFEF;
     border-radius: 0 5px 5px 0;
     border: none;
     display: flex;
@@ -121,7 +121,7 @@ h1 {
 }
 
 .result-box ul li:hover {
-    background: pink;
+    background: rgb(152, 194, 241);
 }
 
 /*MENU BURGER*/
@@ -200,7 +200,7 @@ h1 {
     flex-wrap: wrap;
 }
 .home_btn {
-    background-color: rgb(250, 153, 169);
+    background-color: rgb(138, 201, 249);
     color: white;
     padding: 12px 24px;
     border-radius: 8px;
@@ -210,14 +210,14 @@ h1 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .home_btn:hover {
-    background-color: #a84d82;
+    background-color: #3e71b0;
 }
 
 /*FOOTER*/
 footer{
     position: relative;
     width: 100%;
-    background-color: #F8C8DC;
+    background-color: #4F93A5;
     color: white; 
     text-align: center;
     padding: 20px;
@@ -271,7 +271,7 @@ footer{
     ul.nav-item {
         display: none;
         flex-direction: column;
-        background-color: rgba(248, 200, 220, 0.95);
+        background-color: #5B8DEF;
         width: 100%;
         padding-top: 10px;
         padding-bottom: 10px;

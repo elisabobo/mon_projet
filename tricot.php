@@ -2,8 +2,6 @@
 require_once 'assets/php/Pattern.php';
 require_once 'assets/locales/trad.php';
 
-require_once 'assets/php/session.php';
-
 $patternInstance = new Pattern();
 $patterns = $patternInstance->getByType('tricot');
 

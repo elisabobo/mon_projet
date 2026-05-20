@@ -17,7 +17,7 @@
 }
 
 .pattern-card {
-    background-color: #fff;
+    background-color: #B7D6F2;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -28,7 +28,7 @@
 
 .pattern-title {
     font-size: 1.8em;
-    color: #333;
+    color: #263238;;
     margin-bottom: 15px;
 }
 
@@ -45,7 +45,7 @@
     padding: 10px 20px;
     text-align: center;
     color: white;
-    background-color: #f47288;
+    background-color: #5B8DEF;
     border-radius: 6px;
     text-decoration: none;
     transition: background-color 0.3s ease;

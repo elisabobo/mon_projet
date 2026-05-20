@@ -7,7 +7,7 @@ section {
 
 #myBtn {
     font-size: 1rem;
-    background-color: #f47288;
+    background-color: #72b5f4;
     color: #fff;
     padding: 12px 20px;
     border: none;
@@ -102,7 +102,7 @@ input[type="text"]:focus,
 select:focus,
 textarea:focus,
 input[type="file"]:focus {
-    border-color: #f47288;
+    border-color: #7292f4;
     outline: none;
 }
 
@@ -132,7 +132,7 @@ input[type="file"]:focus {
 
 /* Bouton Envoyer */
 .form-group button {
-    background-color: #f47288;
+    background-color: #728af4;
     color: #fff;
     padding: 12px 20px;
     border: none;
@@ -144,7 +144,7 @@ input[type="file"]:focus {
 }
 
 button:hover, #myBtn:hover {
-    background-color: #f48e9f;
+    background-color: #859ffc;
 }
 
 /* Textarea */
