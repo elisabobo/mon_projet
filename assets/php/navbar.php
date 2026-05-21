@@ -4,7 +4,7 @@
         <i class="ri-menu-line nav_burger"></i>
         <i class="ri-close-line nav_close"></i>
     </div>
-    <h1><a href="/index.php">Connais ton entreprise</a></h1>
+    <h1><a href="/index.php">Entre-nous</a></h1>
 </div>
 
 <div class="nav_actions">
