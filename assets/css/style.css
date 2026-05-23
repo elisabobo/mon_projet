@@ -1,5 +1,5 @@
 html{
-    background-color: #DDEFF3;
+    background-color: #8fd7b7;
     overflow-x: hidden;
 }
 body {
@@ -20,7 +20,7 @@ main{
 }
 
 nav{
-    background-color: #3F7182;
+    background-color: #00915A;
     padding: 10px 40px 10px 70px;
     display: flex;
     justify-content: space-between;
@@ -77,7 +77,7 @@ ul.nav-item a:hover{
     height: 100%;
     width: 40px;
     line-height: 40px;
-    background-color: #5B8DEFEF;
+    background-color: #00C878;
     border-radius: 0 5px 5px 0;
     border: none;
     display: flex;
@@ -213,8 +213,9 @@ h1 {
     gap: 20px;
     flex-wrap: wrap;
 }
+/*boutons du milieu de l'accueil*/
 .home_btn {
-    background-color: rgb(138, 201, 249);
+    background-color: #00C878;
     color: white;
     padding: 12px 24px;
     border-radius: 8px;
@@ -227,11 +228,76 @@ h1 {
     background-color: #3e71b0;
 }
 
+/* ENTREPRISES */
+.companies-section {
+    padding: 50px 8%;
+    background-color: #f6f8fb;
+}
+
+.companies-section h2 {
+    margin-bottom: 24px;
+    color: #213946;
+    font-size: 2rem;
+}
+
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.company-card {
+    background-color: white;
+    border: 1px solid #dce5ea;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.company-card h3 {
+    margin-bottom: 8px;
+    color: #213946;
+    font-size: 1.05rem;
+}
+
+.company-card p {
+    margin-bottom: 12px;
+    color: #52616b;
+}
+
+.company-rating {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #3F7182;
+}
+
+.company-infos {
+    display: grid;
+    gap: 8px;
+    padding: 0;
+    list-style: none;
+}
+
+.company-infos li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.9rem;
+}
+
+.company-infos span {
+    color: #52616b;
+}
+
+.company-infos strong {
+    color: #213946;
+}
+
 /*FOOTER*/
 footer{
     position: relative;
     width: 100%;
-    background-color: #3F7182;
+    background-color: #00915A;
     color: white; 
     text-align: center;
     padding: 20px;

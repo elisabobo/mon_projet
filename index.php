@@ -37,7 +37,6 @@ echo '</pre>';*/
 
     <main>
     <section class="home_background">
-        <img src="/assets/pics/background.png" alt="" class="background-img" aria-hidden="true" />
         <div class="home_content">
             <h1><?=$t['index']['bienvenue']?></h1>
             <p><?=$t['index']['decouvre']?></p>

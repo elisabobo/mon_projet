@@ -44,6 +44,11 @@
         var rows=text.split(NEWLINE);
         //aarray de tous les headers
         var headers=rows.shift().split(DELIMITER);
+        var htr= document.createElement('tr');
+
+        headers.forEach(function(h){
+
+        });
 
     }
 

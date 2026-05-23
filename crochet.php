@@ -36,6 +36,10 @@ error_reporting(E_ALL);
   </header>
 
   <main>
+    <section class="companies-section">
+      <h1>Entreprises</h1>
+      <div id="companies-container" class="companies-grid"></div>
+    </section>
     
     <!--
     <section>
@@ -59,5 +63,6 @@ error_reporting(E_ALL);
   <?php include 'assets/php/footer.php'; ?>
   <script defer src="assets/js/getPattern.js" type="module"></script>
   <script defer src="assets/js/main.js" type="module"></script>
+  <script defer src="/assets/js/corpo_rating.js"></script>
   <script defer src="/assets/js/modal.js" type="module"></script>
 </html>
