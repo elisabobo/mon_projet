@@ -40,29 +40,12 @@ error_reporting(E_ALL);
       <h1>Entreprises</h1>
       <div id="companies-container" class="companies-grid"></div>
     </section>
-    
-    <!--
-    <section>
-        Bouton d'ouverture du modal pour ajouter un patron 
-        <? //php include 'assets/php/modal.php'; ?>
-    </section>
-    -->
-    
-  <ul class="patterns">
-  <?php foreach($patterns as $pattern): ?>
-  <li>
-    <article class="pattern-card">
-      <h2 class="pattern-title"><?php echo htmlspecialchars($pattern['title']); ?></h2>
-      <img alt="" class="pattern-image" src="/assets/php/<?php echo htmlspecialchars($pattern['pic']); ?>" ...>
-    </article>
-  </li>
-  <?php endforeach; ?>
-</ul>
+
+    <?php include 'assets/php/compay_p.php'; ?>
 
   </main>
   <?php include 'assets/php/footer.php'; ?>
-  <script defer src="assets/js/getPattern.js" type="module"></script>
   <script defer src="assets/js/main.js" type="module"></script>
   <script defer src="/assets/js/corpo_rating.js"></script>
-  <script defer src="/assets/js/modal.js" type="module"></script>
+</body>
 </html>

@@ -41,7 +41,7 @@ echo '</pre>';*/
             <h1><?=$t['index']['bienvenue']?></h1>
             <p><?=$t['index']['decouvre']?></p>
             <div class="home_buttons">
-                <a href="/crochet.php" class="home_btn"><?=$t['index']['bouton']?></a>
+                <a href="/entreprise.php" class="home_btn"><?=$t['index']['bouton']?></a>
             </div>
         </div>
 </section>

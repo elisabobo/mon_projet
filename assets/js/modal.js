@@ -1,20 +1,26 @@
-var dialog = document.querySelector("dialog")
+var dialog = document.querySelector("dialog");
 var btn = document.querySelector("dialog + button");
 var span = document.querySelector(".close");
 
-btn.addEventListener("click", ()=>{
-    dialog.showModal();
-});
+if (dialog && btn) {
+    btn.addEventListener("click", ()=>{
+        dialog.showModal();
+    });
+}
 
-span.addEventListener("click", () => {
-    dialog.close(); 
-});
+if (dialog && span) {
+    span.addEventListener("click", () => {
+        dialog.close(); 
+    });
+}
 
-window.onclick = function(event) {
-    if (event.target == dialog) {
-        dialog.close();
-    }
-};
+if (dialog) {
+    window.addEventListener("click", function(event) {
+        if (event.target == dialog) {
+            dialog.close();
+        }
+    });
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('modal-form');
@@ -25,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const description = form.querySelector('textarea[name="description"]').value.trim();
         const image = form.querySelector('input[name="image"]').files[0];
         const type = form.querySelector('select[name="type"]').value;
-        const difficulty = form.querySelector('select[name="difficulte"]').value;
+        const difficulty = form.querySelector('input[name="difficulte"]:checked');
 
         if (!title) {
         errors.push('Le titre est requis.');
